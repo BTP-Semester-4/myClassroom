@@ -34,7 +34,49 @@ app.get("/",(req,res)=>{
     res.render('home'); //home.ejs in views for basic front page.
 })
 
+// app.get("/picnic_ground",async(req,res)=>{
+//     const picnic_ground1=await Picnic.find({});
+//     res.render('picnic_ground/index',{picnic_ground1});
+// })
+
+app.get("/admin",async(req,res)=>{
+    res.render('admin/login');
+})
+
+app.get("/admin/crud",async(req,res)=>{
+    const crudf = await Resource.find({});    //Resource var name for ./models/resource  and find will find everything
+    res.render('admin/crud/index',{crudf});     //opening crud template and passing all find elemnt vry imp.
+});
+
+//getting data from form n saving it in the database model
+app.post("/admin/crud",async(req,res)=>{
+    // res.send(req.body);     //we dont see anything it is empty bcz req.body is not parsed ,after parsing we will see data 
+    // const picnic=new Picnic(req.body.picnic);     //creating model named picnic n saving in the existing model picnic
+    // await picnic.save();                             //saving it
+
+    //OORR
+
+    const new_model_variable=new Resource(req.body.resource);     //creating model named picnic n saving in the existing model picnic
+    await new_model_variable.save();                             //saving it
+    res.redirect(`/admin/crud/${new_model_variable._id}`);    //redirecting n getting the id.
+});
+
+app.get("/admin/crud/new",(req,res)=>{        
+    res.render("admin/crud/new");
+})
+
+app.get("/admin/crud/:id",async(req,res)=>{
+    const catch_id=await Resource.findById(req.params.id);
+    res.render('admin/crud/show',{catch_id});
+});
+
+
+
+// app.get("/admin/index.ejs",async(req,res)=>{
+//     res.render
+// });
+
 // ** Port **
 app.listen(3000,()=>{
     console.log("Listening on the port : 3000");
-});
+});                     //npx nodemon app

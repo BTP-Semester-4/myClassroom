@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <div><a href="">CREATE</a></div>
+        <div><a href="">READ</a></div>
+        <div><a href="">UPDATE</a></div>
+        <div><a href="">DELETE</a></div>
+    </h1>
+
+    <h1>All Announcement</h1>
+
+    
+    <div>
+        <a href="/admin/crud/new">Click here for adding new Announcement</a>        
+        <!-- //path is /admin/crud/new -->
+    </div>
+    
+    <ul>
+        <!-- resources is a database collection where we seeded n stored data -->
+        <% for(let i of crudf){ %>
+             <li><a href="/admin/crud/<%=i._id%>"><%= i.name %> <%= i.year %> <%= i.subject %> <%= i.type %> <%= i.type_title %> <%= i.text %></a></li>
+        <% } %> 
+    </ul>
+    
+</body>
+</html>
