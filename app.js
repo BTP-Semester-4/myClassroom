@@ -83,6 +83,12 @@ app.put("/admin/crud/:id",async(req,res)=>{
     //********* Render and Redirect ke path main antrr hotaa hai... keep in mind **********/
 });
 
+app.delete("/admin/crud/:id",async(req,res)=>{      //suffered 2 hrs because of incorrect path name next time pay attention
+    // res.send("it worked");
+    const {id}=req.params;
+    await Resource.findByIdAndDelete(id);
+    res.redirect('/admin/crud');
+});
 
 
 // app.get("/admin/index.ejs",async(req,res)=>{
