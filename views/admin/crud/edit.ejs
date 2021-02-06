@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement/Resources Updating</title>
+</head>
+<body>
+    <form action="/admin/crud/<%=catch_id._id%>/?_method=PUT" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="resource[name]" value="<%=catch_id.name%>"> 
+        </div>
+        <div>
+            <label for="year">Year</label>
+            <input type="text" id="year" name="resource[year]" value="<%=catch_id.year%>"> 
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="resource[subject]" value="<%=catch_id.subject%>"> 
+        </div>
+        <div>
+            <label for="type">Type</label>
+            <input type="text" id="type" name="resource[type]" value="<%=catch_id.type%>"> 
+        </div>
+        <div>
+            <label for="type_title">Type-Title</label>
+            <input type="text" id="type_title" name="resource[type_title]" value="<%=catch_id.type_title%>"> 
+        </div>
+        <div>
+            <label for="text">Text</label>
+            <input type="text" id="text" name="resource[text]" value="<%=catch_id.text%>"> 
+        </div>
+
+        <button>!! Update !!</button>
+
+        <div>
+            <a href="/admin/crud">All Announcement</a>
+        </div>
+        
+    </form>
+</body>
+</html>

@@ -6,12 +6,16 @@
     <title>Show</title>
 </head>
 <body>
-    <h1>RESOURCES - SHOW</h1>
+    <h1>SHOW-Page of resources</h1>
     <h2><%=catch_id.name%></h2>
     <h2><%=catch_id.year%></h2>
     <h2><%=catch_id.subject%></h2>
     <h2><%=catch_id.type%></h2>
     <h2><%=catch_id.type_title%></h2>
     <h2><%=catch_id.text%></h2>
+
+    <footer>
+        <a href="/admin/crud/<%=catch_id._id%>/edit"><button>Edit</button></a>
+    </footer>
 </body>
 </html>

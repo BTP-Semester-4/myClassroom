@@ -70,6 +70,19 @@ app.get("/admin/crud/:id",async(req,res)=>{
     res.render('admin/crud/show',{catch_id});
 });
 
+app.get("/admin/crud/:id/edit",async(req,res)=>{
+    const catch_id=await Resource.findById(req.params.id); 
+    res.render('admin/crud/edit',{catch_id});
+});
+
+app.put("/admin/crud/:id",async(req,res)=>{
+    // res.send("It worked");
+    const {id}=req.params;      //id is a object , that stores all req parameters. 
+    const var3 = await Resource.findByIdAndUpdate(id,{...req.body.resource});   //spread operator when all the elements need to be included or brought here.
+    res.redirect(`/admin/crud/${var3._id}`);      
+    //********* Render and Redirect ke path main antrr hotaa hai... keep in mind **********/
+});
+
 
 
 // app.get("/admin/index.ejs",async(req,res)=>{
