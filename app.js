@@ -41,11 +41,28 @@ app.get("/",(req,res)=>{
 
 app.get("/admin",async(req,res)=>{
     res.render('admin/login');
-})
+});
+app.get("/year",async(req,res)=>{
+    res.render('year/years');
+});
 
 app.get("/admin/crud",async(req,res)=>{
     const crudf = await Resource.find({});    //Resource var name for ./models/resource  and find will find everything
     res.render('admin/crud/index',{crudf});     //opening crud template and passing all find elemnt vry imp.
+});
+app.get("/year/fy1",async(req,res)=>{
+    const crudf=await Resource.find({});  //crudf is simply variable name for finding purpose
+    res.render('year/fy1',{crudf});
+});
+app.get("/year/sy2",async(req,res)=>{
+    const crudf=await Resource.find({});  //crudf is simply variable name for finding purpose
+    res.render('year/sy2',{crudf});
+});
+app.get("/year/ty3",async(req,res)=>{
+    res.render('year/ty3');
+});
+app.get("/year/fy4",async(req,res)=>{
+    res.render('year/fy4');
 });
 
 //getting data from form n saving it in the database model
