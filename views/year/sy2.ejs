@@ -8,6 +8,101 @@
 </head>
 <body>
     Second Year
-    
+    <div>
+        EM-4
+        <div>
+            <ul>
+               <% /* %>
+
+                    Here U can write comments it will not execute but have above n top symbols.
+
+               <% */ %>
+
+               <% /* %>
+
+                    This for will show the updated announcement at last.
+                    We want the updated one above .So use the down one. which i have implemented.
+                    <!-- looping for extracting i.text -->
+                    <% for(let i of crudf){ %>
+                        <% if(i.subject==="EM-4"){ %> 
+                        <li><%= i.text %></li>
+                        <% } %> 
+                    <% } %>
+
+               <% */ %>
+
+               <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="EM-4"){ %> 
+                <li><%= crudf[i].text %></li>
+                <% } %> 
+               <% } %>
+            </ul>
+        </div>
+    </div>
+    <div>
+        Artificial Intelligence
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                    <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="AI"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                   <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Computer Network
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CN"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Compiler Design
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CD"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Operating System
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="OS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Java
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="JAVA"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
