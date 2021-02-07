@@ -55,14 +55,16 @@ app.get("/year/fy1",async(req,res)=>{
     res.render('year/fy1',{crudf});
 });
 app.get("/year/sy2",async(req,res)=>{
-    const crudf=await Resource.find({});  //crudf is simply variable name for finding purpose
+    const crudf=await Resource.find({});  
     res.render('year/sy2',{crudf});
 });
 app.get("/year/ty3",async(req,res)=>{
-    res.render('year/ty3');
+    const crudf=await Resource.find({});
+    res.render('year/ty3',{crudf});
 });
 app.get("/year/fy4",async(req,res)=>{
-    res.render('year/fy4');
+    const crudf=await Resource.find({});
+    res.render('year/fy4',{crudf});
 });
 
 //getting data from form n saving it in the database model

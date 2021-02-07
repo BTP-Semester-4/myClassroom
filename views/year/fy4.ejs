@@ -8,5 +8,83 @@
 </head>
 <body>
     Fourth Year
+    <div>
+        Modelling and Simulation.
+        <div>
+            <ul>
+               
+               <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="MS"){ %> 
+                <li><%= crudf[i].text %></li>
+                <% } %> 
+               <% } %>
+            </ul>
+        </div>
+    </div>
+    <div>
+        Big Data Analytics
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                    <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="BDA"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                   <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Internet of Things
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="IOT"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Deep Learning
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="DL"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Parallel Computing
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="PC"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Cryptocurrency and Blockchain
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CB"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

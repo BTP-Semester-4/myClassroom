@@ -8,5 +8,83 @@
 </head>
 <body>
     Third Year
+    <div>
+        Information System Security
+        <div>
+            <ul>
+               
+               <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="ISS"){ %> 
+                <li><%= crudf[i].text %></li>
+                <% } %> 
+               <% } %>
+            </ul>
+        </div>
+    </div>
+    <div>
+        Machine Learning
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                    <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="ML"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                   <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Cloud Computing
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CC"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        High Performance Computing
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="HPC"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Computer Graphics
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CG"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        Image Processing
+        <!-- looping for extracting i.text -->
+        <div>
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="IP"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
