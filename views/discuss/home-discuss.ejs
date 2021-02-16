@@ -1,0 +1,57 @@
+
+<%- include("partials/header"); -%>
+
+
+
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,400,300' rel='stylesheet' type='text/css'>
+
+<div class="quiz-window">
+  <div class="quiz-window-header">
+    <div class="quiz-window-title"></div>
+
+  </div>
+  <div class="quiz-window-body">
+    <div class="gui-window-awards">
+      <ul class="guiz-awards-row guiz-awards-header">
+        <li class="guiz-awards-header-star">&nbsp;</li>
+        <li class="guiz-awards-header-title">Posts</li>
+        <li class="guiz-awards-header-track">Created by</li>
+        <li class="guiz-awards-header-time">comments</li>
+      </ul>
+
+    <% var a=0%>
+    <%  posts.forEach(function(post){ %>
+    <%if(a%2==0){%>
+      <%a=a+1%>
+      <ul class="guiz-awards-row guiz-awards-row-even">
+        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
+        <li class="guiz-awards-title"><%=post.title%>
+          <div class="guiz-awards-subtitle">  <%=post.content.substring(0, 100) + " ..."%>
+            <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
+        </li>
+        <li class="guiz-awards-track">8</li>
+        <li class="guiz-awards-time">10</li>
+      </ul>
+    <%}else{%>
+      <%a=a+1%>
+      <ul class="guiz-awards-row ">
+        <li class="guiz-awards-star"><span class="star silverstar"></span></li>
+        <li class="guiz-awards-title"><%=post.title%>
+          <div class="guiz-awards-subtitle">  <%=post.content.substring(0, 100) + " ..."%>
+            <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
+        </li>
+        <li class="guiz-awards-track">8</li>
+        <li class="guiz-awards-time">10</li>
+      </ul>
+        <%}%>
+          <% }) %>
+
+
+
+
+
+    </div>
+
+</div>
+</div>

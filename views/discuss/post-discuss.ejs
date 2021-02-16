@@ -1,0 +1,44 @@
+<%- include("partials/header"); -%>
+<br />
+<br />
+<div class="card">
+  <h2 class="card-header"><%=title%></h2>
+  <div class="card-body">
+
+    <p class="card-text"><%=content%></p>
+
+  </div>
+</div>
+
+
+
+<br />
+<br />
+<h3 style="color:blue"><img src="/comments-48x48.png" />Comments(<%=comm.length%>)</h3>
+
+  <%  comm.forEach(function(comments){ %>
+
+    <div class="card" style="margin-left:10px;margin-top:10px ">
+
+      <div class="card-body ">
+
+        <p class="card-text"><%=comments.comment%></p>
+          <p class="card-text" style="text-align:right;color:blue;font-size:10px"><%=comments.time%></p>
+
+      </div>
+    </div>
+
+  <% }) %>
+
+    <br />
+    <br />
+  <form class="" action="/discuss/posts/<%=postid%>" method="post">
+    <div class="form-group">
+
+      <h3><label>Post a new comment</label></h3>
+      <textarea class="form-control" name="comment" rows="5" cols="30"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" name="buttonc">Post</button>
+  </form>
+<br />
+<br />
