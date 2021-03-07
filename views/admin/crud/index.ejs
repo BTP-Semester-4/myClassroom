@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<% layout('layouts/boilerplate') %>
     <h1>
         <div><a href="">CREATE</a></div>
         <div><a href="">READ</a></div>
@@ -27,6 +20,3 @@
              <li><a href="/admin/crud/<%=i._id%>"><%= i.name %> <%= i.year %> <%= i.subject %> <%= i.type %> <%= i.type_title %> <%= i.text %></a></li>
         <% } %> 
     </ul>
-    
-</body>
-</html>
