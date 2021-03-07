@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require("path");
+const ejsMate=require("ejs-mate");  //useful for layout('layouts/boilerplate.ejs') things
 const methodOverride=require("method-override");    //for over-riding function
 const mongoose=require('mongoose');
-
+const partials = require('express-partials');
 const Resource=require('./models/resource');    //Resource var name for ./models/resource
 const Post=require('./models/post');            //Post var name for the post db
 mongoose.connect('mongodb://localhost:27017/my-college',{       //connect to database *** my-college ***
@@ -22,13 +23,14 @@ db.once('open',()=>{
 // ** Setting app **
 const app=express();
 
+app.engine('ejs',ejsMate);
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'));
 
 app.use(express.urlencoded({extended:true}));     //use() - apply to all req
 app.use(methodOverride('_method'));
 app.use(express.static("public")); //requiring all static files
-
+app.use(partials());
 // ** Setting our routes **
 
 app.get("/",(req,res)=>{
@@ -184,12 +186,7 @@ app.get("/discuss/posts/:postId", async(req, res)=>{
   });
 });
 
-
-
-
-
-
 // ** Port **
-app.listen(3000,()=>{
-    console.log("Listening on the port : 3000");
+app.listen(3001,()=>{
+    console.log("Listening on the port : 3001");
 });                     //npx nodemon app

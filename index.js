@@ -13,7 +13,7 @@ app.set("view engine",'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
 // connecting to DB
-mongoose.connect("mongodb://localhost:27017/usersDB", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/usersDB", { useNewUrlParser: true,useUnifiedTopology: true });
 
 //defining db schema
 const userSchema = {
@@ -101,6 +101,6 @@ app.post("/register",function(req,res)
 });
 
 
-app.listen(3000,function(){
-  console.log("server started on 3000");
+app.listen(3002,function(){
+  console.log("server started on 3002");
 })

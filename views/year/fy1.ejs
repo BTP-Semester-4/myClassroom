@@ -1,89 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Year</title>
-</head>
-<body>
-    First Year
+<% layout('layouts/boilerplate') %>
+First Year
+<div>
+    DSA
     <div>
-        DSA
-        <div>
-            <ul>
-               <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="DSA"){ %> 
+        <ul>
+        <% for(let i=crudf.length-1;i>=0;i--){ %>
+            <% if(crudf[i].subject==="DSA"){ %> 
+            <li><%= crudf[i].text %></li>
+            <% } %> 
+        <% } %>
+        </ul>
+    </div>
+</div>
+<div>
+    EM-2
+    <!-- looping for extracting i.text -->
+    <div>
+        <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="EM-2"){ %> 
                 <li><%= crudf[i].text %></li>
                 <% } %> 
-               <% } %>
-            </ul>
-        </div>
+            <% } %> 
+        </ul>
     </div>
+</div>
+<div>
+    DLD
+    <!-- looping for extracting i.text -->
     <div>
-        EM-2
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                    <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="EM-2"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
-                   <% } %> 
-            </ul>
-        </div>
-    </div>
-    <div>
-        DLD
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="DLD"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
+        <ul>
+            <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="DLD"){ %> 
+                <li><%= crudf[i].text %></li>
                 <% } %> 
-            </ul>
-        </div>
+            <% } %> 
+        </ul>
     </div>
+</div>
+<div>
+    Oops
+    <!-- looping for extracting i.text -->
     <div>
-        Oops
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="OOP"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
+        <ul>
+            <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="OOP"){ %> 
+                <li><%= crudf[i].text %></li>
                 <% } %> 
-            </ul>
-        </div>
+            <% } %> 
+        </ul>
     </div>
+</div>
+<div>
+    Bioscience
+    <!-- looping for extracting i.text -->
     <div>
-        Bioscience
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="BS"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
+        <ul>
+            <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="BS"){ %> 
+                <li><%= crudf[i].text %></li>
                 <% } %> 
-            </ul>
-        </div>
+            <% } %> 
+        </ul>
     </div>
+</div>
+<div>
+    Aptitude and Reasoning.
+    <!-- looping for extracting i.text -->
     <div>
-        Aptitude and Reasoning.
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="AR"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
+        <ul>
+            <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% if(crudf[i].subject==="AR"){ %> 
+                <li><%= crudf[i].text %></li>
                 <% } %> 
-            </ul>
-        </div>
+            <% } %> 
+        </ul>
     </div>
-</body>
-</html>
+</div>
