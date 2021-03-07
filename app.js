@@ -85,7 +85,11 @@ app.post("/admin/crud",async(req,res)=>{
 
 app.get("/admin/crud/new",(req,res)=>{
     res.render("admin/crud/new");
-})
+});
+
+app.get("/admin/about",(req,res)=>{
+    res.render("admin/about");
+});
 
 app.get("/admin/crud/:id",async(req,res)=>{
     const catch_id=await Resource.findById(req.params.id);
@@ -187,6 +191,6 @@ app.get("/discuss/posts/:postId", async(req, res)=>{
 });
 
 // ** Port **
-app.listen(3001,()=>{
-    console.log("Listening on the port : 3001");
+app.listen(3003,()=>{
+    console.log("Listening on the port : 3003");
 });                     //npx nodemon app
