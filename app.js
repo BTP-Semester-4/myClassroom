@@ -143,9 +143,9 @@ app.get("/discuss/about", (req, res)=>{
   res.render("discuss/about");
 });
 
-app.get("/discuss/contact", (req, res)=>{
-  res.render("discuss/contact");
-});
+// app.get("/discuss/contact", (req, res)=>{
+//   res.render("discuss/contact");
+// });
 
 
 app.get("/discuss/compose", (req, res)=>{
@@ -191,6 +191,6 @@ app.get("/discuss/posts/:postId", async(req, res)=>{
 });
 
 // ** Port **
-app.listen(3003,()=>{
-    console.log("Listening on the port : 3003");
+app.listen(3000,()=>{
+    console.log("Listening on the port : 3000");
 });                     //npx nodemon app
