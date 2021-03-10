@@ -6,12 +6,8 @@ html {
 .footer-padding {
 	padding-bottom: 60px;
 }
-
-
-
-
 html {height: 100%;}
-body {
+.effect {
 
   height: 100%;
 
@@ -24,6 +20,7 @@ button, select, input {
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
 }
+
 .quiz-window {
 
   left:0; right:0;
