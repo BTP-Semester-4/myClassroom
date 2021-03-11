@@ -4,8 +4,13 @@ const ejsMate=require("ejs-mate");  //useful for layout('layouts/boilerplate.ejs
 const methodOverride=require("method-override");    //for over-riding function
 const mongoose=require('mongoose');
 const partials = require('express-partials');
+const passport=require('passport');
+const session=require('express-session');
+const localStrategy=require('passport-local');
 const Resource=require('./models/resource');    //Resource var name for ./models/resource
 const Post=require('./models/post');            //Post var name for the post db
+const User=require('./models/user');           //User var name for the user db
+const {isloggedin}=require('./middleware');     //middleware to check if user is logged in
 mongoose.connect('mongodb://localhost:27017/my-college',{       //connect to database *** my-college ***
     useNewUrlParser:true,
     useCreateIndex:true,
@@ -26,11 +31,46 @@ const app=express();
 app.engine('ejs',ejsMate);
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'));
-
 app.use(express.urlencoded({extended:true}));     //use() - apply to all req
 app.use(methodOverride('_method'));
 app.use(express.static("public")); //requiring all static files
 app.use(partials());
+
+//configuring and setting up session
+const sessionConfig={
+  secret:'thisissecret',
+  resave:false,
+  saveUninitialized:true,
+  //cookie set up
+  cookie:{
+    httpOnly:true,
+    expires:Date.now()+1000*60*60*24*7,
+    maxAge:1000*60*60*24*7
+  }
+}
+
+app.use(session(sessionConfig));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use((req, res, next) => {
+  //  console.log(req.session);
+    res.locals.currentUser = req.user;
+    next();
+})
+//using local local Strategy to verify user
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+
+//****************************************************************************************************
+//********************************************************************************************
+
+
+//**************************************Admin and studentcode starts here ***********************************
+
 // ** Setting our routes **
 
 app.get("/",(req,res)=>{
@@ -194,6 +234,58 @@ app.delete("/discuss/posts/:postId",async(req,res)=>{
   const requestedPostId = req.params.postId;
     await Post.findByIdAndDelete(requestedPostId);
     res.redirect('/discuss');
+});
+
+//***************************************************************************************************
+//**********************************************************************************************
+
+
+//************************************** login signup code starts here ***********************************
+
+app.get("/login", function(req,res)
+{
+  res.render("login",{value:0});
+});
+app.get("/register",(req,res)=>
+{
+  res.render("registration");
+});
+
+
+//post request to verify user
+app.post("/login",passport.authenticate('local',{failureFlash:false,failureRedirect:'/'}),(req,res) =>
+{
+res.send("hi");
+
+
+})
+
+
+
+//post request set up for register to save data in DB
+app.post("/register",async(req,res,next)=>{
+  try{
+  const{name,username,email,pass}=req.body;
+  const user=new User({email,username,name});
+  const registeruser=await User.register(user,pass);
+  req.login(registeruser, err => {
+
+          if (err) {return next(err)};
+
+          return  res.redirect('/discuss');
+      })
+  console.log(registeruser);
+
+}
+catch(e)
+{
+res.send(e.message);
+}
+});
+
+app.get("/logout",(req,res)=>{
+  req.logout();
+  res.redirect("/");
 });
 
 // ** Port **
