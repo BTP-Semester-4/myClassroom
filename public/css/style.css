@@ -192,7 +192,7 @@ h2 {
 .clear {
   clear: both; }
 
-body {
+.all {
   font-size: 13px;
   line-height: 1.8;
   color: #222;
@@ -200,7 +200,7 @@ body {
   font-weight: 400;
   font-family: Poppins; }
 
-.container {
+.container1 {
   width: 900px;
   background: #fff;
   margin: 0 auto;
