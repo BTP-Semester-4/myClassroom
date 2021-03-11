@@ -7,6 +7,15 @@ html {
 	padding-bottom: 60px;
 }
 html {height: 100%;}
+.icon-ba{
+  color:red;
+
+}
+.bu{
+
+border: none;
+background: none;
+}
 .effect {
 
   height: 100%;
@@ -16,7 +25,7 @@ html {height: 100%;}
   font-size: 17px;
 
 }
-button, select, input {
+ select, input {
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
 }

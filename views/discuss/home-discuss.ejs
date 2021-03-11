@@ -1,5 +1,5 @@
 <%- include("partials/header"); -%>
-    <div class="effect">
+
 
 
 <div class="quiz-window">
@@ -27,18 +27,18 @@
             <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
         </li>
         <li class="guiz-awards-track">8</li>
-        <li class="guiz-awards-time">10</li>
+        <li class="guiz-awards-time"><%=post.commen.length%></li>
       </ul>
     <%}else{%>
       <%a=a+1%>
       <ul class="guiz-awards-row ">
-        <li class="guiz-awards-star"><span class="star silverstar"></span></li>
+        <li class="guiz-awards-star"><span class="star silverstar"><h2 style="color:White;margin-top:0.8px">P</h2></span></li>
         <li class="guiz-awards-title"><%=post.title%>
           <div class="guiz-awards-subtitle">  <%=post.content.substring(0, 100) + " ..."%>
             <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
         </li>
         <li class="guiz-awards-track">8</li>
-        <li class="guiz-awards-time">10</li>
+        <li class="guiz-awards-time"><%=post.commen.length%></li>
       </ul>
         <%}%>
           <% }) %>
@@ -52,5 +52,5 @@
 </div>
 </div>
 </div>
-</div>
+
 <%- include("partials/footer"); -%>

@@ -190,6 +190,12 @@ app.get("/discuss/posts/:postId", async(req, res)=>{
   });
 });
 
+app.delete("/discuss/posts/:postId",async(req,res)=>{
+  const requestedPostId = req.params.postId;
+    await Post.findByIdAndDelete(requestedPostId);
+    res.redirect('/discuss');
+});
+
 // ** Port **
 app.listen(3000,()=>{
     console.log("Listening on the port : 3000");

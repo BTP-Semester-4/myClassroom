@@ -1,19 +1,31 @@
 <%- include("partials/header"); -%>
 <br />
 <br />
+<h2><%=title%></h2>
 <div class="card">
-  <h2 class="card-header"><%=title%></h2>
+   <div class="card-header text-white" style="background-color: #00AA9E;"><h4><%=title%></h4></div>
   <div class="card-body">
 
     <p class="card-text"><%=content%></p>
 
   </div>
+ <div class="card-footer">
+
+
+      <form action="/discuss/posts/<%=postid%>/?_method=DELETE" method="POST">
+             <p align="right">
+            <button class=" bu"><i class="fas fa-trash icon-ba" style="font-size:20px;"><span style="color:black">Delete</span></i></button>
+          </p>
+
+      </form>
+ </div>
 </div>
 
 
 
 <br />
 <br />
+
 <h3 style="color:blue"><img src="/comments-48x48.png" />Comments(<%=comm.length%>)</h3>
 
   <%  comm.forEach(function(comments){ %>
@@ -22,7 +34,9 @@
 
       <div class="card-body ">
 
-        <p class="card-text"><%=comments.comment%></p>
+          <%-  comments.comment -%>
+
+
           <p class="card-text" style="text-align:right;color:blue;font-size:10px"><%=comments.time%></p>
 
       </div>
@@ -32,6 +46,7 @@
 
     <br />
     <br />
+
   <form class="" action="/discuss/posts/<%=postid%>" method="post">
     <div class="form-group">
 
@@ -42,3 +57,4 @@
   </form>
 <br />
 <br />
+<%- include("partials/footer"); -%>
