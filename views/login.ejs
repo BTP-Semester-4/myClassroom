@@ -7,7 +7,8 @@
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -28,7 +29,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+  <%- include('partials/navbar') %>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -42,7 +43,7 @@
 			<span style="color:red"> Wrong username or password please try again</span>
 		 </center>
 <% } %>
-				<form class="login100-form validate-form" action="\" method="POST">
+				<form class="login100-form validate-form" action="/login" method="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="username" placeholder="Enter username">
@@ -51,7 +52,7 @@
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Enter password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -74,14 +75,14 @@
 			</div>
 		</div>
 	</div>
-
+<%- include('partials/footer') %>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
 <!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
