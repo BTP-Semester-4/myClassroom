@@ -1,0 +1,7 @@
+.t-border{
+    border: 1px solid black;
+}
+.f-box{
+    height: 350px;
+    overflow: auto;
+}

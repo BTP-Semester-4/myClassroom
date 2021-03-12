@@ -1,79 +1,207 @@
 <% layout('layouts/boilerplate') %>
+
+<link rel="stylesheet" href="/css/fysytyfy.css">
+
 First Year
-<div>
-    DSA
-    <div>
-        <ul>
-        <% for(let i=crudf.length-1;i>=0;i--){ %>
-            <% if(crudf[i].subject==="DSA"){ %> 
-            <li><%= crudf[i].text %></li>
-            <% } %> 
-        <% } %>
-        </ul>
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
     </div>
-</div>
-<div>
-    EM-2
-    <!-- looping for extracting i.text -->
-    <div>
-        <ul>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Computer Programming (CP)
+        </div>
+        <div class="col-sm-2 t-border">
+            Engineering Mathematics-1 (EM-1)
+        </div>
+        <div class="col-sm-2 t-border">
+            Basic Electronics Engineering (BEE)
+        </div>
+        <div class="col-sm-2 t-border">
+            Foundations of Computer Science (FCS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Language and writing skills (LWS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Environmental Science (ES)
+        </div>
+    </div>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
+            <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="EM-2"){ %> 
-                <li><%= crudf[i].text %></li>
+                    <% if(crudf[i].subject==="CP"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
                 <% } %> 
-            <% } %> 
-        </ul>
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="EM-1"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="BEE"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="FCS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="LWS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="ES"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
     </div>
 </div>
-<div>
-    DLD
-    <!-- looping for extracting i.text -->
-    <div>
-        <ul>
-            <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="DLD"){ %> 
-                <li><%= crudf[i].text %></li>
-                <% } %> 
-            <% } %> 
-        </ul>
+
+2nd Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
     </div>
-</div>
-<div>
-    Oops
-    <!-- looping for extracting i.text -->
-    <div>
-        <ul>
-            <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="OOP"){ %> 
-                <li><%= crudf[i].text %></li>
-                <% } %> 
-            <% } %> 
-        </ul>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Data Structure & Algorithms (DSA)
+        </div>
+        <div class="col-sm-2 t-border">
+            Engineering Mathematics-2 (EM-2)
+        </div>
+        <div class="col-sm-2 t-border">
+            Object Oriented Programming Language (OOP)
+        </div>
+        <div class="col-sm-2 t-border">
+            Digital Logic & Design (DLD)
+        </div>
+        <div class="col-sm-2 t-border">
+            Introduction to Computational Biology (ICB)
+        </div>
+        <div class="col-sm-2 t-border">
+            HUL Humanity (HUL)
+        </div>
     </div>
-</div>
-<div>
-    Bioscience
-    <!-- looping for extracting i.text -->
-    <div>
-        <ul>
-            <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="BS"){ %> 
-                <li><%= crudf[i].text %></li>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="DSA"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
                 <% } %> 
-            <% } %> 
-        </ul>
-    </div>
-</div>
-<div>
-    Aptitude and Reasoning.
-    <!-- looping for extracting i.text -->
-    <div>
-        <ul>
-            <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="AR"){ %> 
-                <li><%= crudf[i].text %></li>
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="EM-2"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
                 <% } %> 
-            <% } %> 
-        </ul>
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="OOP"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="DLD"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="ICB"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="HUL"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
     </div>
 </div>
