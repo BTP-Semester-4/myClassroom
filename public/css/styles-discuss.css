@@ -1,12 +1,7 @@
-html {
-  min-height: 100%;
-  position: relative;
-}
 
-.footer-padding {
-	padding-bottom: 60px;
-}
-html {height: 100%;}
+
+
+
 .icon-ba{
   color:red;
 
@@ -17,18 +12,12 @@ border: none;
 background: none;
 }
 .effect {
-
-  height: 100%;
-
-  font-family: 'Arial', sans-serif;
+font-family: 'Arial', sans-serif;
   font-weight: 300;
   font-size: 17px;
 
 }
- select, input {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-}
+
 
 .quiz-window {
 

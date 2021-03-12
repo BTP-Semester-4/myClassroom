@@ -1,7 +1,9 @@
+
+
 <%- include("partials/header"); -%>
-<br />
-<br />
+<div class=effect">
 <h2><%=title%></h2>
+
 <div class="card">
    <div class="card-header text-white" style="background-color: #00AA9E;"><h4><%=title%></h4></div>
   <div class="card-body">
@@ -20,13 +22,11 @@
       </form>
  </div>
 </div>
-
-
-
 <br />
 <br />
-
 <h3 style="color:blue"><img src="/comments-48x48.png" />Comments(<%=comm.length%>)</h3>
+   <div>
+
 
   <%  comm.forEach(function(comments){ %>
 
@@ -35,26 +35,31 @@
       <div class="card-body ">
 
           <%-  comments.comment -%>
+             <p class="card-text" style="text-align:right;color:blue;font-size:10px"><%=comments.time%></p>
 
-
-          <p class="card-text" style="text-align:right;color:blue;font-size:10px"><%=comments.time%></p>
-
-      </div>
     </div>
-
+    </div>
+<br />
   <% }) %>
+ </div>
+ <div>
 
-    <br />
-    <br />
 
-  <form class="" action="/discuss/posts/<%=postid%>" method="post">
-    <div class="form-group">
+ <form class="" action="/discuss/posts/<%=postid%>" method="post">
 
-      <h3><label>Post a new comment</label></h3>
-      <textarea class="form-control" name="comment" rows="5" cols="30"></textarea>
-    </div>
-    <button class="btn btn-primary" type="submit" name="buttonc">Post</button>
-  </form>
+
+     <h3><label>Post a new comment</label></h3>
+     <textarea class="form-control" name="comment" rows="5" cols="30"></textarea>
+
+   <button class="btn btn-primary" type="submit" name="buttonc">Post</button>
+ </form>
+ </div>
 <br />
 <br />
+
+</div>
+</div>
+</div>
+
+
 <%- include("partials/footer"); -%>
