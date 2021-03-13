@@ -23,7 +23,25 @@
         <!-- Sign up form -->
         <section class="signup">
             <div class="container container1">
+
+              <% if(success && success.length) {%>
+                  <br />
+            <div class="flash"  role="alert">
+                  <%= success %>
+                  
+              </div>
+              <% } %>
+
+              <% if(error && error.length) {%>
+                  <br />
+              <div class="flash"  role="alert">
+                <center >
+                <span style="color:red;font-size:15px;">	<%= error %></span>
+                </center>
+              </div>
+              <% } %>
                 <div class="signup-content">
+
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
                         <form method="POST" class="register-form" id="register-form">

@@ -30,19 +30,34 @@
 </head>
 <body>
   <%- include('partials/navbar') %>
+
+
 	<div class="limiter">
+
 		<div class="container-login100">
+
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
 					<span class="login100-form-title-1">
 						Sign In
+
+
 					</span>
 				</div>
-				<%if (value ===1) { %>
-     <center>
-			<span style="color:red"> Wrong username or password please try again</span>
-		 </center>
-<% } %>
+				<% if(success && success.length) {%>
+				<div class="flash"  role="alert">
+						<%= success %>
+
+				</div>
+				<% } %>
+
+				<% if(error && error.length) {%>
+				<div class="flash"  role="alert">
+					<center >
+					<span style="color:red;font-size:22px;">	<%= error %></span>
+					</center>
+				</div>
+				<% } %>
 				<form class="login100-form validate-form" action="/login" method="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
