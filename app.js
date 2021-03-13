@@ -3,6 +3,7 @@ const path = require("path");
 const ejsMate=require("ejs-mate");  //useful for layout('layouts/boilerplate.ejs') things
 const methodOverride=require("method-override");    //for over-riding function
 const mongoose=require('mongoose');
+const flash = require('connect-flash');
 const partials = require('express-partials');
 const passport=require('passport');
 const session=require('express-session');
@@ -36,6 +37,7 @@ app.use(methodOverride('_method'));
 app.use(express.static("public")); //requiring all static files
 app.use(partials());
 
+
 //configuring and setting up session
 const sessionConfig={
   secret:'thisissecret',
@@ -52,10 +54,12 @@ const sessionConfig={
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(flash());
 app.use((req, res, next) => {
-  //  console.log(req.session);
+   //console.log(req.session);
     res.locals.currentUser = req.user;
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
     next();
 })
 //using local local Strategy to verify user
@@ -188,14 +192,15 @@ app.get("/discuss/about", (req, res)=>{
 // });
 
 
-app.get("/discuss/compose", (req, res)=>{
+app.get("/discuss/compose",isloggedin, (req, res)=>{
   res.render("discuss/compose-discuss");
 });
 
 
 //post routes setup for compose
-app.post("/discuss/compose", async(req, res)=>{
+app.post("/discuss/compose",isloggedin, async(req, res)=>{
   const post = new Post ({
+    postby:req.user.username,
     title: req.body.postTitle,
     content: req.body.postBody,
     commen:[]
@@ -205,9 +210,10 @@ app.post("/discuss/compose", async(req, res)=>{
 
 });
 //post and get route for each post
-app.post("/discuss/posts/:postId",async (req,res)=>
+app.post("/discuss/posts/:postId",isloggedin,async (req,res)=>
 {
   const comments = {
+    crtby:req.user.username,
     comment:req.body.comment,
     time:(new Date().toLocaleString()),//to get the time of posting in the comment
   };
@@ -219,10 +225,11 @@ app.post("/discuss/posts/:postId",async (req,res)=>
   res.redirect(`/discuss/posts/${requestedPostId}`);
 });
 
-app.get("/discuss/posts/:postId", async(req, res)=>{
+app.get("/discuss/posts/:postId",isloggedin, async(req, res)=>{
   const requestedPostId = req.params.postId;
   const post=await Post.findOne({_id:requestedPostId});
   res.render("discuss/post-discuss", {
+    postby:post.postby,
     title: post.title,
     content: post.content,
     postid:requestedPostId,
@@ -230,7 +237,7 @@ app.get("/discuss/posts/:postId", async(req, res)=>{
   });
 });
 
-app.delete("/discuss/posts/:postId",async(req,res)=>{
+app.delete("/discuss/posts/:postId",isloggedin,async(req,res)=>{
   const requestedPostId = req.params.postId;
     await Post.findByIdAndDelete(requestedPostId);
     res.redirect('/discuss');
@@ -253,9 +260,15 @@ app.get("/register",(req,res)=>
 
 
 //post request to verify user
-app.post("/login",passport.authenticate('local',{failureFlash:false,failureRedirect:'/'}),(req,res) =>
+app.post("/login",passport.authenticate('local',{failureFlash:true,failureRedirect:'/login'}),(req,res) =>
 {
-res.send("hi");
+
+    // console.log(req.session.returnTo);
+   const redirectURL=req.session.returnTo || '/' ;
+
+   delete req.session.returnTo;
+req.flash("success","hello!");
+  res.redirect(redirectURL);
 
 
 })
@@ -279,7 +292,8 @@ app.post("/register",async(req,res,next)=>{
 }
 catch(e)
 {
-res.send(e.message);
+  req.flash("error",e.message);
+    res.redirect("/register");
 }
 });
 
