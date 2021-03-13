@@ -303,6 +303,6 @@ app.get("/logout",(req,res)=>{
 });
 
 // ** Port **
-app.listen(80,()=>{
+app.listen(3000,()=>{
     console.log("Listening on the port : 80");
 });                     //npx nodemon app
