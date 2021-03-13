@@ -16,7 +16,7 @@
             <th scope="col">Subject</th>
             <th scope="col">Title</th>
             <th scope="col">Announcement</th>
-            <th scope="col">Edit</th>
+            <th scope="col">Detail</th>
           </tr>
         </thead>
 
@@ -25,7 +25,7 @@
                 <!-- resources is a database collection where we seeded n stored data -->
                 <% for(let i of crudf){ %>
                      <tr>
-                        <th scope="row"><li></th><td><%= i.name %></td><td><%= i.year %></td><td><%= i.subject %></td><td><%= i.type_title %></td><td><%= i.text %></td><td><button type="button" class="btn btn-primary" style="padding: 1px;"><a href="/admin/crud/<%=i._id%>" style="text-decoration: none; color: white;">Update</a></button></td>
+                        <th scope="row"><li></th><td><%= i.name %></td><td><%= i.year %></td><td><%= i.subject %></td><td><%= i.type_title %></td><td><%= i.text %></td><td><button type="button" class="btn btn-primary" style="padding: 1px;"><a href="/admin/crud/<%=i._id%>" style="text-decoration: none; color: white;">Detail</a></button></td>
                     </tr>
                 <% } %> 
             </ol>
