@@ -1,53 +1,155 @@
 <% layout('layouts/boilerplate') %>
-    Second Year
-    <div>
-        EM-4
-        <div>
-            <ul>
-               <% /* %>
 
-                    Here U can write comments it will not execute but have above n top symbols.
+<link rel="stylesheet" href="/css/fysytyfy.css">
 
-               <% */ %>
+Third Semester
 
-               <% /* %>
-
-                    This for will show the updated announcement at last.
-                    We want the updated one above .So use the down one. which i have implemented.
-                    <!-- looping for extracting i.text -->
-                    <% for(let i of crudf){ %>
-                        <% if(i.subject==="EM-4"){ %> 
-                        <li><%= i.text %></li>
-                        <% } %> 
-                    <% } %>
-
-               <% */ %>
-
-               <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="EM-4"){ %> 
-                <li><%= crudf[i].text %></li>
-                <% } %> 
-               <% } %>
-            </ul>
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
         </div>
     </div>
-    <div>
-        Artificial Intelligence
-        <!-- looping for extracting i.text -->
-        <div>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Probability and Random Process (PRP)
+        </div>
+        <div class="col-sm-2 t-border">
+            Analysis & Design of Algorithm (ADA)
+        </div>
+        <div class="col-sm-2 t-border">
+            Computer Organization and Architecture (COA)
+        </div>
+        <div class="col-sm-2 t-border">
+            Theory of computation (TOC)
+        </div>
+        <div class="col-sm-2 t-border">
+            Database Management System (DBMS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Python programming (PP)
+        </div>
+    </div>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
             <ul>
-                    <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="AI"){ %> 
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="PRP"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
-                   <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="ADA"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="COA"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="TOC"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="DBMS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="PP"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
             </ul>
         </div>
     </div>
-    <div>
-        Computer Network
-        <!-- looping for extracting i.text -->
-        <div>
+</div>
+
+ Fourth Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+    </div>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Computer Network (CN)
+        </div>
+        <div class="col-sm-2 t-border">
+            Artificial Intelligence (AI)
+        </div>
+        <div class="col-sm-2 t-border">
+            Operating System (OS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Compiler Design (CD)
+        </div>
+        <div class="col-sm-2 t-border">
+            Discrete Structure (DS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Java Programming (JP)
+        </div>
+    </div>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="CN"){ %> 
@@ -56,24 +158,16 @@
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Compiler Design
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="CD"){ %> 
+                    <% if(crudf[i].subject==="AI"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Operating System
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="OS"){ %> 
@@ -82,17 +176,32 @@
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Java
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="JAVA"){ %> 
+                    <% if(crudf[i].subject==="CD"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="DS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="JP"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
     </div>
+</div>

@@ -1,61 +1,164 @@
 <% layout('layouts/boilerplate') %>
-    Third Year
-    <div>
-        Information System Security
-        <div>
-            <ul>
-               
-               <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="ISS"){ %> 
-                <li><%= crudf[i].text %></li>
-                <% } %> 
-               <% } %>
-            </ul>
+
+<link rel="stylesheet" href="/css/fysytyfy.css">
+
+Fifth Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
         </div>
     </div>
-    <div>
-        Machine Learning
-        <!-- looping for extracting i.text -->
-        <div>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Machine Learning (ML)
+        </div>
+        <div class="col-sm-2 t-border">
+            Interactive Design (ID)
+        </div>
+        <div class="col-sm-2 t-border">
+            Cryptography and Network Security (CNS)
+        </div>
+        <div class="col-sm-2 t-border">
+            Software Engineering (SE)
+        </div>
+        <div class="col-sm-2 t-border">
+            Linear Nonlinear Optimization (LNO)
+        </div>
+        <div class="col-sm-2 t-border">
+            Elective-1 (E5-1)
+        </div>
+    </div>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
             <ul>
-                    <% for(let i=crudf.length-1;i>=0;i--){ %>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="ML"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
-                   <% } %> 
+                <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Cloud Computing
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="CC"){ %> 
+                    <% if(crudf[i].subject==="ID"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="CNS"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="SE"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="LNO"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="E5-1"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
     </div>
-    <div>
-        High Performance Computing
-        <!-- looping for extracting i.text -->
-        <div>
+</div>
+
+Sixth Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+    </div>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Internet of Things (IOT)
+        </div>
+        <div class="col-sm-2 t-border">
+            Computer Graphics (CG)
+        </div>
+        <div class="col-sm-2 t-border">
+            Cloud Computing (CC)
+        </div>
+        <div class="col-sm-2 t-border">
+            Elective-1 (E6-1)
+        </div>
+        <div class="col-sm-2 t-border">
+            Elective-2 (E6-2)
+        </div>
+        <div class="col-sm-2 t-border">
+            Elective-3 (E6-3)
+        </div>
+    </div>
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="HPC"){ %> 
+                    <% if(crudf[i].subject==="IOT"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Computer Graphics
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="CG"){ %> 
@@ -64,17 +167,41 @@
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Image Processing
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="IP"){ %> 
+                    <% if(crudf[i].subject==="CC"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="E6-1"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="E6-2"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+        <div class="col-sm-2 t-border">
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="E6-3"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
     </div>
+</div>
