@@ -11,6 +11,7 @@ const postSchema= new Schema ({
   postby:String,
   title: String,
   content: String,
+  time:String,
   commen:[commentSchema]
 });
 
