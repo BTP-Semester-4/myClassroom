@@ -1,0 +1,93 @@
+body{
+    
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    margin-bottom: 50px;
+    text-decoration: underline black;
+    display: inline-block;
+    
+}
+.ch{
+    width: 150px;
+    margin-left: 900px;
+    
+}
+h2{
+    margin-left: 100px;
+    font-size: 80px;
+    color: whitesmoke
+}
+.up{
+    height: 550px;
+    width: 118.2%;
+    background-image: url(/images/icons/img23.jpg);
+    background-repeat: no-repeat;
+    background-size: 1525px 650px;
+    margin-left: -113px;
+    margin-top: -48px;
+}
+.heading{
+    display: inline-block;
+    font-size: 50px;
+    padding-left: 30px;
+    margin-top: 20px;
+    padding-top: 0px;
+    color: black;
+}.one{
+    display: inline-block;
+    margin-top: 250px;
+    margin-left: 100px;
+    margin-right: 30px;
+    
+    padding: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.two{
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 30px;
+    
+    padding: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.three{
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 30px;
+    
+    padding: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.four{
+    display: inline-block;
+    margin-top: 5px;
+    
+    padding: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.card-body{
+    background-color: white;
+}
+p{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.one:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.two:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.three:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.four:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
