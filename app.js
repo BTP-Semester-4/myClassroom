@@ -315,7 +315,7 @@ app.get("/logout",(req,res)=>{
 });
 
 
-//teacher signup
+//teacher signup starts here
 
 app.get("/adminregister",(req,res)=>
 {
