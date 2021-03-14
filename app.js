@@ -94,7 +94,7 @@ app.get("/year",async(req,res)=>{
     res.render('year/years');
 });
 
-app.get("/admin/crud",async(req,res)=>{
+app.get("/admin/crud",isteacher,async(req,res)=>{
     const crudf = await Resource.find({});    //Resource var name for ./models/resource  and find will find everything
     res.render('admin/crud/index',{crudf});     //opening crud template and passing all find elemnt vry imp.
 });
@@ -116,7 +116,7 @@ app.get("/year/fy4",async(req,res)=>{
 });
 
 //getting data from form n saving it in the database model
-app.post("/admin/crud",async(req,res)=>{
+app.post("/admin/crud",isteacher,async(req,res)=>{
     // res.send(req.body);     //we dont see anything it is empty bcz req.body is not parsed ,after parsing we will see data
     // const picnic=new Picnic(req.body.picnic);     //creating model named picnic n saving in the existing model picnic
     // await picnic.save();                             //saving it
@@ -128,7 +128,7 @@ app.post("/admin/crud",async(req,res)=>{
     res.redirect(`/admin/crud/${new_model_variable._id}`);    //redirecting n getting the id.
 });
 
-app.get("/admin/crud/new",(req,res)=>{
+app.get("/admin/crud/new",isteacher,(req,res)=>{
     res.render("admin/crud/new");
 });
 
@@ -136,17 +136,17 @@ app.get("/admin/about",(req,res)=>{
     res.render("admin/about");
 });
 
-app.get("/admin/crud/:id",async(req,res)=>{
+app.get("/admin/crud/:id",isteacher,async(req,res)=>{
     const catch_id=await Resource.findById(req.params.id);
     res.render('admin/crud/show',{catch_id});
 });
 
-app.get("/admin/crud/:id/edit",async(req,res)=>{
+app.get("/admin/crud/:id/edit",isteacher,async(req,res)=>{
     const catch_id=await Resource.findById(req.params.id);
     res.render('admin/crud/edit',{catch_id});
 });
 
-app.put("/admin/crud/:id",async(req,res)=>{
+app.put("/admin/crud/:id",isteacher,async(req,res)=>{
     // res.send("It worked");
     const {id}=req.params;      //id is a object , that stores all req parameters.
     const var3 = await Resource.findByIdAndUpdate(id,{...req.body.resource});   //spread operator when all the elements need to be included or brought here.
@@ -154,7 +154,7 @@ app.put("/admin/crud/:id",async(req,res)=>{
     //********* Render and Redirect ke path main antrr hotaa hai... keep in mind **********/
 });
 
-app.delete("/admin/crud/:id",async(req,res)=>{      //suffered 2 hrs because of incorrect path name next time pay attention
+app.delete("/admin/crud/:id",isteacher,async(req,res)=>{      //suffered 2 hrs because of incorrect path name next time pay attention
     // res.send("it worked");
     const {id}=req.params;
     await Resource.findByIdAndDelete(id);
