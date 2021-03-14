@@ -1,62 +1,120 @@
-<%- include("partials/header"); -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>myClassroom</title>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/styles-discuss.css">
+
+</head>
+
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <!--     .. selects parent directory from current -->
+
+  <div style="background:#f97767;">
+
+    <div class="row">
+      <br>
+      <div class="col-4" style="margin-top:35px;">
+        <!-- <div style="display:flex; justify-content:flex-end; width:100%; padding:20px;"> -->
+
+        <center>
+
+          <div style="color:white;">
+            <h3> Welcome to Discuss</h3>
+
+            <br />
+            <h4 style="margin:25px;"> This is the place to brainstorm to get answers and to help community get every question answered</h4>
+          </div>
+          <div>
 
 
-<div class="vh-100">
+            <button class="btn btn-dark"><a class="nav-link" href="/discuss/compose" style="color:white;"><i class="fas fa-edit"></i> Ask a Question</a></button>
+          </div>
+        </center>
+      </div>
 
+      <div class="col-8" style="margin-top:20px;">
+        <img src="images/capture.png" style="width:1000px;height:350px;padding:20px;" />
+      </div>
 
-<div class="quiz-window">
-  <div class="quiz-window-header">
-    <div class="quiz-window-title"></div>
+    </div>
 
   </div>
-  <div class="quiz-window-body">
-    <div class="gui-window-awards">
-      <ul class="guiz-awards-row guiz-awards-header">
-        <li class="guiz-awards-header-star">&nbsp;</li>
-        <li class="guiz-awards-header-title">Posts</li>
-        <li class="guiz-awards-header-track">Created by</li>
-        <li class="guiz-awards-header-time">comments</li>
-      </ul>
+  <div class="container">
+    <div>
 
-    <% var a=0%>
-    <%  posts.forEach(function(post){ %>
-    <%if(a%2==0){%>
-      <%a=a+1%>
-      <ul class="guiz-awards-row guiz-awards-row-even">
-        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
-        <li class="guiz-awards-title"><%=post.title%>
-          <div class="guiz-awards-subtitle">  <%=post.content.substring(0, 100) + " ..."%>
-            <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
-        </li>
-        <li class="guiz-awards-track">8</li>
-        <li class="guiz-awards-time"><%=post.commen.length%></li>
-      </ul>
-    <%}else{%>
-      <%a=a+1%>
-      <ul class="guiz-awards-row ">
-        <li class="guiz-awards-star"><span class="star silverstar"><h2 style="color:White;margin-top:0.8px">P</h2></span></li>
-        <li class="guiz-awards-title"><%=post.title%>
-          <div class="guiz-awards-subtitle">  <%=post.content.substring(0, 100) + " ..."%>
-            <a href="/discuss/posts/<%=post._id%>">Read More</a></div>
-        </li>
-        <li class="guiz-awards-track">8</li>
-        <li class="guiz-awards-time"><%=post.commen.length%></li>
-      </ul>
-        <%}%>
+
+
+      <div class="vh-100">
+
+
+
+        <div class="quiz-window">
+          <div class="quiz-window-header">
+            <div class="quiz-window-title"></div>
+
+          </div>
+          <div class="quiz-window-body">
+            <div class="gui-window-awards">
+              <ul class="guiz-awards-row guiz-awards-header">
+                <li class="guiz-awards-header-star">&nbsp;</li>
+                <li class="guiz-awards-header-title"> Recent Question</li>
+                <li class="guiz-awards-header-track">Asked by</li>
+                <li class="guiz-awards-header-time">comments</li>
+              </ul>
+
+              <% var a=0%>
+              <%  posts.forEach(function(post){ %>
+              <%if(a%2==0){%>
+              <%a=a+1%>
+              <ul class="guiz-awards-row guiz-awards-row-even">
+                <li class="guiz-awards-star"><span class="star goldstar">
+                   <h2 style="color:White;margin-top:0.8px"><%=post.postby.substring(0, 1)%></h2>
+                </span></li>
+                <li class="guiz-awards-title"><%=post.title%>
+                  <div class="guiz-awards-subtitle"> <%=post.content.substring(0, 150) + " ..."%>
+                    <a href="/discuss/posts/<%=post._id%>">Read More</a>
+                  </div>
+                </li>
+                <li class="guiz-awards-track"><%=post.postby%></li>
+                <li class="guiz-awards-time"><%=post.commen.length%></li>
+              </ul>
+              <%}else{%>
+              <%a=a+1%>
+              <ul class="guiz-awards-row ">
+                <li class="guiz-awards-star"><span class="star silverstar">
+                  <h2 style="color:White;margin-top:0.8px"><%=post.postby.substring(0, 1)%></h2>
+                  </span></li>
+                <li class="guiz-awards-title"><%=post.title%>
+                  <div class="guiz-awards-subtitle"> <%=post.content.substring(0, 100) + " ..."%>
+                    <a href="/discuss/posts/<%=post._id%>">Read More</a>
+                  </div>
+                </li>
+                <li class="guiz-awards-track">8</li>
+                <li class="guiz-awards-time"><%=post.commen.length%></li>
+              </ul>
+              <%}%>
           <% }) %>
 
 
 
 
 
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-</div>
-</div>
-</div>
-</div>
   </div>
-<br />
-<br />
+  <br />
+  <br />
 
-<%- include("partials/footer"); -%>
+  <%- include("partials/footer"); -%>

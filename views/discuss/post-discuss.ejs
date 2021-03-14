@@ -1,68 +1,139 @@
 
 
 <%- include("partials/header"); -%>
+
+<div style="background-color:#f3f3f3;">
+
+
+  <br />
+  <br />
+  <br />
+
+
+<div class="row">
+
+
+
+
+<div class="container">
+
+<div>
+
 <div class=effect">
-<h2><%=title%></h2>
+<div class="row">
+<div class="col-8"  >
+<div class="card " style="margin-left:70px;" >
+   <!-- <div class="card-header text-white" style="background-color: #00AA9E;"><h4><span><%=title%></span><span style="float:right;">Asked by:<%=postby%></span></h4> -->
 
-<div class="card">
-   <div class="card-header text-white" style="background-color: #00AA9E;"><h4><span><%=title%></span><span style="float:right;">Asked by:<%=postby%></span></h4>
+   <!-- </div> -->
+  <div class="card-body" style="margin:5px;">
+<h2 class="card-text" style="color:#f97767;"><%=title%></h2>
+<br />
 
-   </div>
-  <div class="card-body">
-
-    <p class="card-text"><%=content%></p>
-
-  </div>
- <div class="card-footer">
+      <p class="card-text"><%=content%></p>
 
 
+
+
+
+<hr />
+<div class="row">
+
+  <div class="col">
+    <i class="fas fa-user" style="font-size:20px;">&nbsp;&nbsp; <%=postby%></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <i class="fas fa-clock"> <%=time%></i>
+    </div>
+    <div class="col">
+
+<%  if(postby === currentUser.username) {%>
       <form action="/discuss/posts/<%=postid%>/?_method=DELETE" method="POST">
 
-             <p align="right">
-            <button class=" bu"><i class="fas fa-trash icon-ba" style="font-size:20px;"><span style="color:black">Delete</span></i></button>
-          </p>
+<button class=" btn bu float-end"><i class="fas fa-trash icon-ba" style="font-size:20px;"><span style="color:black">Delete</span></i></button>
+
 
       </form>
+      <%}%>
+      </div>
  </div>
+        </div>
+
 </div>
 <br />
 <br />
-<h3 style="color:blue"><img src="/comments-48x48.png" />Comments(<%=comm.length%>)</h3>
+<h3 style="color:blue ;margin-left:70px;"><img src="/comments-48x48.png" />Comments(<%=comm.length%>)</h3>
    <div>
 
-
+<br />
   <%  comm.forEach(function(comments){ %>
 
-    <div class="card" style="margin-left:10px;margin-top:10px ">
+    <div class="card " style="margin-left:70px;" ">
 
       <div class="card-body ">
 
+
           <%-  comments.comment -%>
-             <p class="card-text" style="text-align:right;color:blue;font-size:10px"><%=comments.time%></p>
+          <hr />
+              <i class="fas fa-user" style="font-size:20px;">&nbsp;&nbsp; <%=comments.crtby%></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fas fa-clock"> <%=comments.time%></i>
+
 
     </div>
     </div>
 <br />
   <% }) %>
  </div>
- <div>
+ <div style="margin-left:70px;">
+
+
 
 
  <form class="" action="/discuss/posts/<%=postid%>" method="post">
 
 
      <h3><label>Post a new comment</label></h3>
-     <textarea class="form-control" name="comment" rows="5" cols="30"></textarea>
+     <textarea class="form-control" name="comment" rows="5" cols="20"></textarea>
 
    <button class="btn btn-primary" type="submit" name="buttonc">Post</button>
  </form>
+
  </div>
+ </div>
+ <div class="col-4">
+
+     <center>
+       <button class="btn btn-dark "><a class="nav-link" href="/discuss/compose" style="color:white;"><i class="fas fa-edit"></i> Ask a Question</a></button>
+         <br />
+         <br />
+         <br />
+         <br />
+</center>
+
+       <div class="card mx-auto "style="width: 20rem;margin-left:35px;;">
+        <div class="card-body">
+          <h3 style="color:#f97767;">Recent Questions</h3>
+
+            <%  for (var i = posts.length - 1; i >= posts.length -3; --i){ %>
+              <hr />
+        <a  href="/discuss/posts/<%=posts[i]._id%>"  class="a1" > <h5><%=posts[i].title.substring(0, 50) %></h5> </a>
+          <%=posts[i].content.substring(0, 50) + " ..."%>
+
+                 <% } %>
+                   </div>
+         </div>
+
+
+
+
+   </div>
 <br />
 <br />
 
 </div>
 </div>
 </div>
-
+</div>
+</div>
+<br />
+<br />
 
 <%- include("partials/footer"); -%>
