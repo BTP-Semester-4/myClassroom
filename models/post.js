@@ -4,7 +4,8 @@ const Schema=mongoose.Schema;
 const commentSchema={
   crtby:String,
   comment:String,
-  time:String
+  time:String,
+  value:Number,
 };
 
 const postSchema= new Schema ({

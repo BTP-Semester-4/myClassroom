@@ -9,7 +9,8 @@ const UserSchema= new Schema({
     required:true,
     unique:true,
   },
-  name:String
+  name:String,
+  value:Number,
 });
 UserSchema.plugin(passportLocalMongoose);
 UserSchema.plugin(uniqueValidator, { message: 'Email already exist' });
