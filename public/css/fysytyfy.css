@@ -13,39 +13,70 @@
 .f1-box{
     height: 170px;
 }
+.inc{
+    background-color: rgb(228, 228, 224);
+    color: rgb(12, 12, 12);
+}
+.f2-box{
+    /* height: 56px;
+    font-size: 0.9rem;
+    align-items: center;
+    text-align: center;
+    /* margin: 0px auto; */
+    /* justify-content: center; */
+    height: 56px;
+    font-size: 0.9rem;
+    /* align-items: center; */
+    text-align: center;
+    /* margin: 0px auto; */
+    justify-content: center;
+    padding: 0px;
+}
 .imgd{
     background: url("../images/person1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img1{
     background: url("../images/angha_mam.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img2{
     background: url("../images/Ranjith.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img3{
     background: url("../images/Dr-Apoorva-Mishra_1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img4{
     background: url("../images/DVM.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img5{
     background: url("../images/chandrakant_pic.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img6{
     background: url("../images/tanmoy_1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img7{
     background: url("../images/sandeepsir.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img8{
     background: url("../images/Sanjeev.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img9{
     background: url("../images/bhupendra.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img10{
     background: url("../images/ritu_mam.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
 .img11{
     background: url("../images/bhupendra.jpg") no-repeat center center/cover;
+    padding:2px 2px;
 }
