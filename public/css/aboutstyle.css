@@ -1,0 +1,100 @@
+#bg{
+    background-image: url(bg2.png);
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    background-image: url();
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Asap', sans-serif;
+}
+
+#navbar{
+    color: black;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#navb2{
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 150px;
+}
+#content{
+    text-align: center;
+    margin-top: 300px;
+}
+.carousel-inner{
+    height: 600px;
+}
+section .wave{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+#sect{
+    background-color: black;
+}
+#sect h1{
+    color: blanchedalmond;
+}
+#sect p{
+    color: blanchedalmond;
+}
+.first{
+    height: 600px;
+    background-color:cornflowerblue;
+    margin-top: -48px;
+    width: 117.4%;
+    margin-left: -112px;
+}
+.main1
+{
+    font-size: 100px;
+    color: whitesmoke;
+    text-align: center;
+    
+}
+.main2
+{
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 250px;
+}
+.im{
+    
+    width: 45%;
+    float: right;
+    height: 100%;
+}
+.im2{
+    
+    text-align: center;
+    height: 50%;
+}
+.second{
+    height: 500px;
+    background-color:blueviolet;
+    font-size: 10px;
+    width: 117.4%;
+    margin-left: -112px;
+}
+.bl{
+    color: black;
+   
+}
+li{
+    margin-bottom: 30px;
+}
