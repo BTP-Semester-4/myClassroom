@@ -44,28 +44,52 @@
     <div class="row f-box">
         <div class="col-sm-4 t-border">
             <!-- looping for extracting i.text -->
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E7-1"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-4 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E7-2"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-4 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="MP"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
@@ -86,17 +110,25 @@
     </div>
     <div class="row f2-box">
         <div class="col-sm-12 inc btc2">
-            Major Project / Internship (MP/I)
+            Major Project / Internship (MPI)
         </div>
     </div>
 
     <div class="row f-box">
         <div class="col-sm-12 t-border">
             <!-- looping for extracting i.text -->
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="MPI"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
