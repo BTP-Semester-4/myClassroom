@@ -121,8 +121,9 @@
        <div class="card mx-auto "style="width: 20rem;margin-left:35px;;">
         <div class="card-body">
           <h3 style="color:#f97767;">Recent Questions</h3>
+          <% var end =Math.max( posts.length -3,0)%>
 
-            <%  for (var i = posts.length - 1; i >= posts.length -3; --i){ %>
+            <%  for (var i = posts.length - 1; i >=end; --i){ %>
               <hr />
         <a  href="/discuss/posts/<%=posts[i]._id%>"  class="a1" > <h5><%=posts[i].title.substring(0, 50) %></h5> </a>
           <%=posts[i].content.substring(0, 50) + " ..."%>
