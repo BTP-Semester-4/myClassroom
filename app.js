@@ -203,6 +203,7 @@ app.post("/discuss/compose",isloggedin, async(req, res)=>{
     postby:req.user.username,
     title: req.body.postTitle,
     content: req.body.postBody,
+      time:(new Date().toLocaleString()),
     commen:[]
   });
   await post.save();
@@ -226,6 +227,7 @@ app.post("/discuss/posts/:postId",isloggedin,async (req,res)=>
 });
 
 app.get("/discuss/posts/:postId",isloggedin, async(req, res)=>{
+  const pos=await  Post.find({});
   const requestedPostId = req.params.postId;
   const post=await Post.findOne({_id:requestedPostId});
   res.render("discuss/post-discuss", {
@@ -233,6 +235,8 @@ app.get("/discuss/posts/:postId",isloggedin, async(req, res)=>{
     title: post.title,
     content: post.content,
     postid:requestedPostId,
+    posts:pos,
+    time:post.time,
     comm:post.commen
   });
 });
