@@ -3,8 +3,9 @@
     padding: 0px 0px;
 }
 .t-border{
-    border: 1px solid black;
-    border-radius: 20px;
+    border: 1px solid  rgb(187, 184, 184);
+    padding: 0px 0px;
+    /* border-radius: 20px; */
 }
 .f-box{
     height: 350px;
@@ -25,7 +26,7 @@
     /* margin: 0px auto; */
     /* justify-content: center; */
     height: 56px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     /* align-items: center; */
     text-align: center;
     /* margin: 0px auto; */
@@ -79,4 +80,19 @@
 .img11{
     background: url("../images/bhupendra.jpg") no-repeat center center/cover;
     padding:2px 2px;
+}
+
+.bt1{
+    border: 1px dashed black; 
+    border-width: 0px 1px 1px 1px;
+}
+.btc{
+    /* border-collapse: collapse;
+    border-spacing: 0; */
+    border: 1px solid rgb(187, 184, 184);
+    border-width: 1px 1px 0px 1px; 
+}
+.btc2{
+    border: 1px solid rgb(187, 184, 184);
+    border-width: 0px 1px 1px 1px;
 }
