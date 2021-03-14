@@ -5,9 +5,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/admin">Teacher Section</a>
+
+          <ul class="navbar-nav mr-auto">
+
+
+        <li>  <a class="nav-link" href="/">Home</a></li>
+          <li> <a class="nav-link" href="/admin">Teacher Section</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,10 +27,27 @@
             </ul>
           </li>
 
-          <a class="nav-link" href="/discuss">Discuss Portal</a>
-          <a class="nav-link" href="/admin/about">About-us</a>
+          <li><a class="nav-link" href="/discuss">Discuss Portal</a></li>
+          <li><a class="nav-link" href="/admin/about">About-us</a></li>
+            </ul>
+            <div class="navbar-nav ms-auto">
+            <%  if(!currentUser)  {%>
+
+                <a class="nav-link " href="/login">Login</a>
+                <a class="nav-link " href="/Register">Register</a>
+              <%} else{%>
+
+              <a class="nav-link " href="/logout">Logout</a>
+              <%}%>
+
+              </div>
+
           <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-        </div>
+
+
+
       </div>
+
+
     </div>
   </nav>
