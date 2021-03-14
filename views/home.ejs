@@ -1,4 +1,18 @@
 <% layout('layouts/boilerplate') %>
+<% if(success && success.length) {%>
+<div class="flash"  role="alert">
+    <%= success %>
+
+</div>
+<% } %>
+
+<% if(error && error.length) {%>
+<div class="flash"  role="alert">
+  <center >
+  <span style="color:red;font-size:22px;">	<%= error %></span>
+  </center>
+</div>
+<% } %>
     <h1>
         <div>
             <a href="/year">Students</a>

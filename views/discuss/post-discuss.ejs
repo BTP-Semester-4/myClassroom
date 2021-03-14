@@ -65,14 +65,24 @@
 
 <br />
   <%  comm.forEach(function(comments){ %>
+    <%if(comments.value==1){%>
+      <div class="card bg-custom-1 " style="margin-left:70px; ">
+    <%}else{%>
+      <div class="card " style="margin-left:70px;" ">
+    <%}%>
 
-    <div class="card " style="margin-left:70px;" ">
+
 
       <div class="card-body ">
 
 
           <%-  comments.comment -%>
           <hr />
+          <%if(comments.value==1){%>
+            <i class="fas fa-star">&nbsp;&nbsp;Faculty</i>&nbsp; &nbsp; &nbsp;&nbsp;
+          <%} else {%>
+          <i>Student&nbsp;&nbsp;</i>
+          <%}%>
               <i class="fas fa-user" style="font-size:20px;">&nbsp;&nbsp; <%=comments.crtby%></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <i class="fas fa-clock"> <%=comments.time%></i>
 
