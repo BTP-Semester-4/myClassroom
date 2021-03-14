@@ -1,22 +1,42 @@
 <% layout('layouts/boilerplate') %>
     <h1>
-        <div><a href="">CREATE</a></div>
-        <div><a href="">READ</a></div>
-        <div><a href="">UPDATE</a></div>
-        <div><a href="">DELETE</a></div>
+        <h1>All Announcement
+        <button type="button" class="btn btn-success" style="float: right;"><a href="/admin/crud/new" style="text-decoration: none; color: white;">CREATE</a></button>
+        <!-- //path is /admin/crud/new -->
+        <h1>
     </h1>
 
-    <h1>All Announcement</h1>
+    <table class="table table-hover table-striped table-bordered">
 
-    
-    <div>
-        <a href="/admin/crud/new">Click here for adding new Announcement</a>        
-        <!-- //path is /admin/crud/new -->
-    </div>
-    
-    <ul>
+        <thead>
+          <tr style="color: white; background-color: rgb(253, 115, 115);">
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Year</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Title</th>
+            <th scope="col">Announcement</th>
+            <th scope="col">Detail</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <ol type="1">
+                <!-- resources is a database collection where we seeded n stored data -->
+                <% for(let i of crudf){ %>
+                     <tr>
+                        <th scope="row"><li></th><td><%= i.name %></td><td><%= i.year %></td><td><%= i.subject %></td><td><%= i.type_title %></td><td><%= i.text %></td><td><button type="button" class="btn btn-primary" style="padding: 1px;"><a href="/admin/crud/<%=i._id%>" style="text-decoration: none; color: white;">Detail</a></button></td>
+                    </tr>
+                <% } %> 
+            </ol>
+        </tbody>
+    </table>
+
+    <!-- <ol> -->
         <!-- resources is a database collection where we seeded n stored data -->
+        <% /* %> 
         <% for(let i of crudf){ %>
              <li><a href="/admin/crud/<%=i._id%>"><%= i.name %> <%= i.year %> <%= i.subject %> <%= i.type %> <%= i.type_title %> <%= i.text %></a></li>
         <% } %> 
-    </ul>
+        <% */ %> 
+    <!-- </ol> -->

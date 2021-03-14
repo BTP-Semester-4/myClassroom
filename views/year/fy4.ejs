@@ -1,80 +1,88 @@
 <% layout('layouts/boilerplate') %>
-    Fourth Year
-    <div>
-        Modelling and Simulation.
-        <div>
-            <ul>
-               
-               <% for(let i=crudf.length-1;i>=0;i--){ %>
-                <% if(crudf[i].subject==="MS"){ %> 
-                <li><%= crudf[i].text %></li>
-                <% } %> 
-               <% } %>
-            </ul>
+
+<link rel="stylesheet" href="/css/fysytyfy.css">
+
+Seventh Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-4 t-border">
+            images
+        </div>
+        <div class="col-sm-4 t-border">
+            images
+        </div>
+        <div class="col-sm-4 t-border">
+            images
         </div>
     </div>
-    <div>
-        Big Data Analytics
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                    <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="BDA"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
-                   <% } %> 
-            </ul>
+    <div class="row t-border">
+        <div class="col-sm-4 t-border">
+            Elective-1 (E7-1)
+        </div>
+        <div class="col-sm-4 t-border">
+            Elective-2 (E7-2)
+        </div>
+        <div class="col-sm-4 t-border">
+            Major Project (MP)
         </div>
     </div>
-    <div>
-        Internet of Things
-        <!-- looping for extracting i.text -->
-        <div>
-            <ul>
-                <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="IOT"){ %> 
-                    <li><%= crudf[i].text %></li>
-                    <% } %> 
-                <% } %> 
-            </ul>
-        </div>
-    </div>
-    <div>
-        Deep Learning
-        <!-- looping for extracting i.text -->
-        <div>
+    <div class="row t-border f-box">
+        <div class="col-sm-4 t-border">
+            <!-- looping for extracting i.text -->
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="DL"){ %> 
+                    <% if(crudf[i].subject==="E7-1"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Parallel Computing
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-4 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="PC"){ %> 
+                    <% if(crudf[i].subject==="E7-2"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
-    </div>
-    <div>
-        Cryptocurrency and Blockchain
-        <!-- looping for extracting i.text -->
-        <div>
+        <div class="col-sm-2 t-border">
             <ul>
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
-                    <% if(crudf[i].subject==="CB"){ %> 
+                    <% if(crudf[i].subject==="MP"){ %> 
                     <li><%= crudf[i].text %></li>
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
     </div>
+</div>
+
+Eight Semester
+
+<div class="container t-border">
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            images
+        </div>
+    </div>
+    <div class="row t-border">
+        <div class="col-sm-2 t-border">
+            Major Project / Internship (MP/I)
+        </div>
+    </div>
+
+    <div class="row t-border f-box">
+        <div class="col-sm-2 t-border">
+            <!-- looping for extracting i.text -->
+            <ul>
+                <% for(let i=crudf.length-1;i>=0;i--){ %>
+                    <% if(crudf[i].subject==="MPI"){ %> 
+                    <li><%= crudf[i].text %></li>
+                    <% } %> 
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+</div>

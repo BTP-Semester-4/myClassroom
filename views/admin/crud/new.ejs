@@ -1,33 +1,89 @@
 <% layout('layouts/boilerplate') %>
+<div class="container">
     <form action="/admin/crud" method="POST">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="resource[name]"> 
-        </div>
-        <div>
-            <label for="year">Year</label>
-            <input type="text" id="year" name="resource[year]"> 
-        </div>
-        <div>
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="resource[subject]"> 
-        </div>
-        <div>
-            <label for="type">Type</label>
-            <input type="text" id="type" name="resource[type]"> 
-        </div>
-        <div>
-            <label for="type_title">Type-Title</label>
-            <input type="text" id="type_title" name="resource[type_title]"> 
-        </div>
-        <div>
-            <label for="text">Text</label>
-            <input type="text" id="text" name="resource[text]"> 
+
+        <div class="row mb-3">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="name" name="resource[name]">
+            </div>
         </div>
 
-        <button>!! Add !!</button>
-        <div>
-            <a href="/admin/crud">All Announcement</a>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Year</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[year]" id="year" value="1" checked>
+                <label class="form-check-label" for="year">
+                  First Year
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[year]" id="year" value="2" checked>
+                <label class="form-check-label" for="year">
+                  Second Year
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[year]" id="year" value="3" checked>
+                <label class="form-check-label" for="year">
+                  Third Year
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[year]" id="year" value="4" checked>
+                <label class="form-check-label" for="year">
+                  Fourth Year
+                </label>
+              </div>              
+            </div>
+          </fieldset>
+
+        <div class="row mb-3">
+            <label for="subject" class="col-sm-2 col-form-label">Subject</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="subject" name="resource[subject]">
+            </div>
         </div>
-        
+
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[type]" id="type" value="1" checked>
+                <label class="form-check-label" for="type">
+                  Announcement
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resource[type]" id="type" value="2">
+                <label class="form-check-label" for="type">
+                  Resource
+                </label>
+              </div>
+            </div>
+        </fieldset>
+
+        <div class="row mb-3">
+            <label for="type_title" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="type_title" name="resource[type_title]">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="text" class="col-sm-2 col-form-label">Announce</label>
+            <div class="col-sm-6">
+              <textarea type="text" class="form-control" id="text" name="resource[text]"></textarea>
+            </div>
+        </div>
+
+        <button class="btn btn-success"> Post </button>
+
+        <div style="float: right;">
+            <button class="btn btn-danger"><a href="/admin/crud"  style="text-decoration: none; color: white;">All Announcement</a></button>
+        </div>
+        <br><br>
     </form>
+</div>
+    
