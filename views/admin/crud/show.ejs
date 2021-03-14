@@ -1,3 +1,4 @@
+<% /* %> 
 <% layout('layouts/boilerplate') %>
     <h1>SHOW-Page of resources</h1>
     <h2><%=catch_id.name%></h2>
@@ -15,3 +16,47 @@
     <footer>
         <a href="/admin/crud/<%=catch_id._id%>/edit"><button>Edit</button></a>
     </footer>
+
+    <% */ %> 
+
+<% layout('layouts/boilerplate') %>
+    <div class="card text-center">
+        <div class="card-header text-center" style="padding: 15px 15px;">
+          <h3>Details</h3>
+        </div>
+        <div class="card-body text-start">
+          <h5 class="card-title text-center" style="color: tomato; text-decoration: underline;"><%=catch_id.name%></h5>
+          <p class="card-text text-start">Year : <%=catch_id.year%></p>
+          <p class="card-text text-start">Subject : <%=catch_id.subject%></p>
+          <p class="card-text text-start">
+              <script>
+                  var a=<%=catch_id.type%>;
+                  if(a){
+
+                  }
+              </script>
+
+                <% /* %>
+                 if(<%=catch_id.type%>==='1'){    //wrong statement
+                <% */ %>  
+
+                <% if(catch_id.type==='1'){ %>
+                    Announcement
+                <% }else{ %>
+                    Resources
+                <% } %> 
+          </p>
+          <p class="card-text text-center" style="text-decoration: underline;">Title : <%=catch_id.type_title%></p>
+          <p class="card-text text-center">=> <%=catch_id.text%></p>
+        </div>
+
+        <div class="card-footer text-muted" style="display: flex; flex-direction: row;">
+            <div style="margin: 0px 0; width: 33%;"><a class="btn btn-success" href="/admin/crud/<%=catch_id._id%>/edit" class="text-end">Edit</a></div>
+            <div style="margin: 0px 0; width: 33%;"><a href="/admin/crud" class="btn btn-primary">All Posts</a></div>
+          <div style="margin: 0px 0; width: 33%;">
+            <form action="/admin/crud/<%=catch_id._id%>/?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+          </div>
+        </div>
+    </div>
