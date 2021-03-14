@@ -82,7 +82,7 @@
               <%a=a+1%>
               <ul class="guiz-awards-row guiz-awards-row-even">
                 <li class="guiz-awards-star"><span class="star goldstar">
-                   <h2 style="color:White;margin-top:0.8px"><%=posts[i].postby.substring(0, 1)%></h2>
+                   <h2 style="color:White;margin-top:0.8px"><%=posts[i].postby.toString().substring(0, 1)%></h2>
                 </span></li>
                 <li class="guiz-awards-title"><%=posts[i].title%>
                   <div class="guiz-awards-subtitle"> <%=posts[i].content.substring(0, 50) + " ..."%>
