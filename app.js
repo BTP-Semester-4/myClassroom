@@ -12,6 +12,7 @@ const Resource=require('./models/resource');    //Resource var name for ./models
 const Post=require('./models/post');            //Post var name for the post db
 const User=require('./models/user');           //User var name for the user db
 const {isloggedin}=require('./middleware');     //middleware to check if user is logged in
+const {isteacher}=require('./adminmiddleware');
 mongoose.connect('mongodb://localhost:27017/my-college',{       //connect to database *** my-college ***
     useNewUrlParser:true,
     useCreateIndex:true,
@@ -86,7 +87,7 @@ app.get("/",(req,res)=>{
 //     res.render('picnic_ground/index',{picnic_ground1});
 // })
 
-app.get("/admin",async(req,res)=>{
+app.get("/admin",isteacher,async(req,res)=>{
     res.render('admin/login');
 });
 app.get("/year",async(req,res)=>{
@@ -200,6 +201,7 @@ app.get("/discuss/compose",isloggedin, (req, res)=>{
 //post routes setup for compose
 app.post("/discuss/compose",isloggedin, async(req, res)=>{
   const post = new Post ({
+    value:req.user.value,
     postby:req.user.username,
     title: req.body.postTitle,
     content: req.body.postBody,
@@ -216,6 +218,7 @@ app.post("/discuss/posts/:postId",isloggedin,async (req,res)=>
   const comments = {
     crtby:req.user.username,
     comment:req.body.comment,
+    value:req.user.value,
     time:(new Date().toLocaleString()),//to get the time of posting in the comment
   };
 
@@ -231,6 +234,7 @@ app.get("/discuss/posts/:postId",isloggedin, async(req, res)=>{
   const requestedPostId = req.params.postId;
   const post=await Post.findOne({_id:requestedPostId});
   res.render("discuss/post-discuss", {
+    value:post.value,
     postby:post.postby,
     title: post.title,
     content: post.content,
@@ -271,7 +275,7 @@ app.post("/login",passport.authenticate('local',{failureFlash:true,failureRedire
    const redirectURL=req.session.returnTo || '/' ;
 
    delete req.session.returnTo;
-req.flash("success","hello!");
+
   res.redirect(redirectURL);
 
 
@@ -282,14 +286,18 @@ req.flash("success","hello!");
 //post request set up for register to save data in DB
 app.post("/register",async(req,res,next)=>{
   try{
+    const redirectURL=req.session.returnTo || '/' ;
+
+    delete req.session.returnTo;
   const{name,username,email,pass}=req.body;
-  const user=new User({email,username,name});
+  const value=0;
+  const user=new User({email,username,name,value});
   const registeruser=await User.register(user,pass);
   req.login(registeruser, err => {
 
           if (err) {return next(err)};
 
-          return  res.redirect('/discuss');
+          return  res.redirect(redirectURL);
       })
   console.log(registeruser);
 
@@ -304,6 +312,38 @@ catch(e)
 app.get("/logout",(req,res)=>{
   req.logout();
   res.redirect("/");
+});
+
+
+//teacher signup
+
+app.get("/adminregister",(req,res)=>
+{
+  res.render("registration");
+});
+app.post("/adminregister",async(req,res,next)=>{
+  try{
+    const redirectURL=req.session.returnTo || '/' ;
+
+    delete req.session.returnTo;
+  const{name,username,email,pass}=req.body;
+  const value=1;
+  const user=new User({email,username,name,value});
+  const registeruser=await User.register(user,pass);
+  req.login(registeruser, err => {
+
+          if (err) {return next(err)};
+
+          return  res.redirect(redirectURL);
+      })
+  console.log(registeruser);
+
+}
+catch(e)
+{
+  req.flash("error",e.message);
+    res.redirect("/register");
+}
 });
 
 // ** Port **
