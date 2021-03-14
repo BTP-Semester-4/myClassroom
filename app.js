@@ -13,7 +13,7 @@ const Post=require('./models/post');            //Post var name for the post db
 const User=require('./models/user');           //User var name for the user db
 const {isloggedin}=require('./middleware');     //middleware to check if user is logged in
 const {isteacher}=require('./adminmiddleware');
-mongoose.connect('mongodb://localhost:27017/my-college',{       //connect to database *** my-college ***
+mongoose.connect('mongodb+srv://testuser:user@cluster0.emdme.mongodb.net/my-college2?retryWrites=true&w=majority',{       //connect to database *** my-college ***
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true,
@@ -347,6 +347,11 @@ catch(e)
 });
 
 // ** Port **
-app.listen(3000,()=>{
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port,()=>{
     console.log("Listening on the port : 3000");
 });                     //npx nodemon app
