@@ -1,6 +1,17 @@
 
 
+.a1{
+ color:black;
+  text-decoration: none;
+}
+.a1:hover {
+color:#f97767;
 
+}
+.f1{
+margin: 0 auto;
+width:900px;
+}
 
 .icon-ba{
   color:red;
