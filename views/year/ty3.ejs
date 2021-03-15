@@ -2,101 +2,147 @@
 
 <link rel="stylesheet" href="/css/fysytyfy.css">
 
-Fifth Semester
+<center class="mt-1">
+    <div class="alert alert-info col-sm-4 mb-2" role="alert">
+        Fifth Semester
+    </div>
+</center>
 
-<div class="container t-border">
-    <div class="row t-border">
-        <div class="col-sm-2 t-border">
-            images
+<div class="container">
+    <div class="row inc f1-box">
+        <div class="col-sm-2 btc img6">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc img1">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
     </div>
-    <div class="row t-border">
-        <div class="col-sm-2 t-border">
+    <div class="row f2-box">
+        <div class="col-sm-2 inc btc2">
             Machine Learning (ML)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Interactive Design (ID)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Cryptography and Network Security (CNS)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Software Engineering (SE)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Linear Nonlinear Optimization (LNO)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Elective-1 (E5-1)
         </div>
     </div>
-    <div class="row t-border f-box">
+    <div class="row f-box">
         <div class="col-sm-2 t-border">
             <!-- looping for extracting i.text -->
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="ML"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="ID"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="CNS"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="SE"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="LNO"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E5-1"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
@@ -104,104 +150,151 @@ Fifth Semester
     </div>
 </div>
 
-Sixth Semester
+<center class="mt-4">
+    <div class="alert alert-info col-sm-4 mb-2" role="alert">
+        Sixth Semester
+    </div>
+</center>
 
-<div class="container t-border">
-    <div class="row t-border">
-        <div class="col-sm-2 t-border">
-            images
+<div class="container">
+    <div class="row inc f1-box">
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
-        <div class="col-sm-2 t-border">
-            images
+        <div class="col-sm-2 btc imgd">
         </div>
     </div>
-    <div class="row t-border">
-        <div class="col-sm-2 t-border">
+    <div class="row f2-box">
+        <div class="col-sm-2 inc btc2">
             Internet of Things (IOT)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Computer Graphics (CG)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Cloud Computing (CC)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Elective-1 (E6-1)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Elective-2 (E6-2)
         </div>
-        <div class="col-sm-2 t-border">
+        <div class="col-sm-2 inc btc2">
             Elective-3 (E6-3)
         </div>
     </div>
-    <div class="row t-border f-box">
+    <div class="row f-box">
         <div class="col-sm-2 t-border">
             <!-- looping for extracting i.text -->
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="IOT"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="CG"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="CC"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E6-1"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E6-2"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
         <div class="col-sm-2 t-border">
-            <ul>
+            <ul style="padding: 0px 20px;">
                 <% for(let i=crudf.length-1;i>=0;i--){ %>
                     <% if(crudf[i].subject==="E6-3"){ %> 
-                    <li><%= crudf[i].text %></li>
+                        
+                        <li style="color: rgb(1, 131, 1);text-decoration: underline; word-break: break-all;"><%= crudf[i].type_title %></li>
+                        
+                        <% if(crudf[i].type==='1'){ %>
+                            <p style="word-break: break-all;font-size: 0.8rem;"><%= crudf[i].text %></p>
+                        <% }else{ %>
+                            <a style="word-break: break-all;font-size: 0.8rem;" target="_blank" href="<%= crudf[i].text %>"><%= crudf[i].text %></a>
+                        <% } %> 
+                    
                     <% } %> 
                 <% } %> 
             </ul>
         </div>
     </div>
 </div>
+<br>

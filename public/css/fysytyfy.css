@@ -1,8 +1,98 @@
+.mp-reset{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
 .t-border{
-    border: 1px solid black;
-    border-radius: 20px;
+    border: 1px solid  rgb(187, 184, 184);
+    padding: 0px 0px;
+    /* border-radius: 20px; */
 }
 .f-box{
     height: 350px;
     overflow: auto;
+}
+.f1-box{
+    height: 170px;
+}
+.inc{
+    background-color: rgb(228, 228, 224);
+    color: rgb(12, 12, 12);
+}
+.f2-box{
+    /* height: 56px;
+    font-size: 0.9rem;
+    align-items: center;
+    text-align: center;
+    /* margin: 0px auto; */
+    /* justify-content: center; */
+    height: 56px;
+    font-size: 0.8rem;
+    /* align-items: center; */
+    text-align: center;
+    /* margin: 0px auto; */
+    justify-content: center;
+    padding: 0px;
+}
+.imgd{
+    background: url("../images/person1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img1{
+    background: url("../images/angha_mam.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img2{
+    background: url("../images/Ranjith.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img3{
+    background: url("../images/Dr-Apoorva-Mishra_1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img4{
+    background: url("../images/DVM.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img5{
+    background: url("../images/chandrakant_pic.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img6{
+    background: url("../images/tanmoy_1.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img7{
+    background: url("../images/sandeepsir.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img8{
+    background: url("../images/Sanjeev.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img9{
+    background: url("../images/bhupendra.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img10{
+    background: url("../images/ritu_mam.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+.img11{
+    background: url("../images/bhupendra.jpg") no-repeat center center/cover;
+    padding:2px 2px;
+}
+
+.bt1{
+    border: 1px dashed black; 
+    border-width: 0px 1px 1px 1px;
+}
+.btc{
+    /* border-collapse: collapse;
+    border-spacing: 0; */
+    border: 1px solid rgb(187, 184, 184);
+    border-width: 1px 1px 0px 1px; 
+}
+.btc2{
+    border: 1px solid rgb(187, 184, 184);
+    border-width: 0px 1px 1px 1px;
 }

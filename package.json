@@ -13,6 +13,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+  "node": "14.15.3"
+},
   "bugs": {
     "url": "https://github.com/BTP-Semester-4/myClassroom/issues"
   },
