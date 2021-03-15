@@ -342,7 +342,7 @@ app.post("/adminregister",async(req,res,next)=>{
 catch(e)
 {
   req.flash("error",e.message);
-    res.redirect("/register");
+    res.redirect("/adminregister");
 }
 });
 
