@@ -13,7 +13,7 @@ const Post=require('./models/post');            //Post var name for the post db
 const User=require('./models/user');           //User var name for the user db
 const {isloggedin}=require('./middleware');     //middleware to check if user is logged in
 const {isteacher}=require('./adminmiddleware');
-mongoose.connect('mongodb+srv://testuser:user@cluster0.emdme.mongodb.net/my-college2?retryWrites=true&w=majority',{       //connect to database *** my-college ***
+mongoose.connect('mongodb+srv://testuser:user@cluster0.gta0v.mongodb.net/myClassroom?retryWrites=true&w=majority',{       //connect to database *** my-college ***
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true,
