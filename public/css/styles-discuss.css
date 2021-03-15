@@ -1,6 +1,9 @@
 .bg-custom-1{
     background-color: #FFFF99!important;
 }
+.card1{
+  margin-left:70px;
+}
 .mar{margin-left:12px;}
 .ime{
   width:100%;
@@ -71,7 +74,7 @@ font-family: 'Arial', sans-serif;
 
 }
 .guiz-awards-row li {
-  display:inline-block;
+
   vertical-align: top;
   float: left;
 }
@@ -129,6 +132,7 @@ font-family: 'Arial', sans-serif;
 }
 .guiz-awards-header-track2
 {
+  display:block;
   padding-left:13%;
   font-size:20px;
 }
@@ -178,16 +182,25 @@ border: none;}
 }
 .guiz-awards-header-track3
 {
-  padding-left:33%;
+  padding-left:54%;
   font-size:15px;
 }
 .guiz-awards-header-track2
+
 {
+  display:none;
   padding-left:7%;
   font-size:15px;
 }
+.guiz-awards-track{
+  padding-left:15%;
+}
 .guiz-awards-track1{
+  display:none;
 padding-left: 5%;
+}
+.card1{
+  margin:10%;
 }
 
 }
