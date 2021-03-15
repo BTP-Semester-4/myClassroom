@@ -4,9 +4,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 117.4%;
-    margin-left: -112px;
-    margin-top: -48px;
 }
 #bg2{
     background-image: url(bg2.png);
@@ -44,8 +41,7 @@ section .wave{
 }
 #sect{
     background-color: black;
-    width: 117.4%;
-    margin-left: -112px;
+    
 }
 #sect h1{
     color: blanchedalmond;

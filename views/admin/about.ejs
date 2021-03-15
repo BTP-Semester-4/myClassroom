@@ -1,4 +1,14 @@
-<% layout('layouts/boilerplate') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boiler Plate!!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar') %> 
 <link rel="stylesheet" href="/css/aboutstyle.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap" rel="stylesheet">
@@ -8,14 +18,14 @@
     <!-- Pranchal -->
     <!-- Kushagra -->
     <div id="about">
-        <div class="first"><div style="width: 55%; display: inline-block;"><p class="main1">About us</p>
-          <ul style="font-size: 40px; margin-left: 200px;">
-          <li><a href="#aim" class="bl">Aim</a></li>
-          <li><a href="#features" class="bl">Features</a></li>
-          <li><a href="#benifits" class="bl">Benifits</a></li></ul>
+        <div class="row align-items-start" id="first"><div class="col" style=" display: inline-block;"><p class="main1">About us</p>
+          <ul style="font-size: 40px; ">
+          <li class="cl"><a href="#aim" class="bl">Aim</a></li>
+          <li class="cl"><a href="#features" class="bl">Features</a></li>
+          <li class="cl"><a href="#benifits" class="bl">Benifits</a></li></ul>
         </div>
-        <div class="im">
-        <img src="/images/logo2.png" alt="" style="height: 600px;" >
+        <div class="col">
+        <img src="/images/logo2.png" alt="" style="height: 600px;" class="img-fluid" >
       </div>
         </div>
         <div class="container" style="font-size: 22px;" id="cont">
@@ -61,3 +71,7 @@
         
         </div>
         </div>
+        <%- include('../partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+    </html>

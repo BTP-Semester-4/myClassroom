@@ -1,19 +1,15 @@
-#bg{
-    background-image: url(bg2.png);
-    height: 550px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 body{
     background-image: url();
     height: 750px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+}
+#about{
     font-family: 'Asap', sans-serif;
 }
-
 #navbar{
     color: black;
     font-size: 30px;
@@ -25,10 +21,7 @@ body{
     justify-content: space-around;
     margin-right: 150px;
 }
-#content{
-    text-align: center;
-    margin-top: 300px;
-}
+
 .carousel-inner{
     height: 600px;
 }
@@ -50,12 +43,10 @@ section .wave{
 #sect p{
     color: blanchedalmond;
 }
-.first{
+#first{
     height: 600px;
     background-color:cornflowerblue;
-    margin-top: -48px;
-    width: 117.4%;
-    margin-left: -112px;
+   
 }
 .main1
 {
@@ -88,13 +79,14 @@ section .wave{
     height: 500px;
     background-color:blueviolet;
     font-size: 10px;
-    width: 117.4%;
-    margin-left: -112px;
+   
 }
 .bl{
     color: black;
-   
-}
-li{
     margin-bottom: 30px;
 }
+.cl{
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+

@@ -1,5 +1,16 @@
-<% layout('layouts/boilerplate') %>
-<link rel="stylesheet" href="/css/design3.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boiler Plate!!</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar') %> 
+    <link rel="stylesheet" href="/css/design3.css">
     <!-- <a href="/year/fy1">First Year</a> -->
     <!-- <a href="/year/sy2">Second Year</a> -->
     <!-- <a href="/year/ty3">Third Year</a> -->
@@ -8,9 +19,11 @@
     
         <div class="up" style="display: inline-block;">
          
-      <h2>Select your <br> particular year</h2>
-          
-      <div class="one">
+      <h2 >Select your <br> particular year <br><br><br></h2>
+      <div class="container">
+          <div class="row">
+            <div class="col">
+      
           <div class="card" style="width: 18rem;">
               
               <div class="card-body" id="main">
@@ -19,8 +32,10 @@
                 <a href="/year/fy1" class="btn btn-primary" id="btn" style="width: 100%;">Click Here</a>
               </div>
             </div>
-      </div>
-      <div class="two">
+      
+    </div>
+    <div class="col">
+      
           <div class="card" style="width: 18rem;">
               
               <div class="card-body">
@@ -29,8 +44,10 @@
                 <a href="/year/sy2" class="btn btn-primary" style="width: 100%;">Click Here</a>
               </div>
             </div>
-      </div>
-      <div class="three">
+      
+    </div>
+    <div class="col">
+      
           <div class="card" style="width: 18rem;">
               
               <div class="card-body">
@@ -40,7 +57,9 @@
               </div>
             </div>
       </div>
-      <div class="four">
+    
+    <div class="col">
+      
           <div class="card" style="width: 18rem;">
               
               <div class="card-body">
@@ -50,7 +69,15 @@
               </div>
             </div>
       </div>
-      <p class="last">The primary purpose of myClassroom is to streamline the process of sharing files between teachers and students.</p>
     </div>
-  
+  </div>
+    
+    <div>
+      <p class="last">The primary purpose of myClassroom is to streamline the process of sharing files between teachers and students.</p>
+      <%- include('../partials/footer') %>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
   
