@@ -9,10 +9,12 @@ const passport=require('passport');
 const session=require('express-session');
 const localStrategy=require('passport-local');
 const Resource=require('./models/resource');    //Resource var name for ./models/resource
-const Post=require('./models/post');            //Post var name for the post db
+const Post=require('./models/post');           //Post var name for the post db
+const Poll=require('./models/poll');
 const User=require('./models/user');           //User var name for the user db
 const {isloggedin}=require('./middleware');     //middleware to check if user is logged in
 const {isteacher}=require('./adminmiddleware');
+const poll = require("./models/poll");
 mongoose.connect('mongodb+srv://testuser:user@cluster0.gta0v.mongodb.net/myClassroom?retryWrites=true&w=majority',{       //connect to database *** my-college ***
     useNewUrlParser:true,
     useCreateIndex:true,
@@ -345,6 +347,54 @@ catch(e)
     res.redirect("/adminregister");
 }
 });
+
+
+
+//******poll */
+app.get("/poll/compose", (req, res)=>{
+  res.render("poll/compose-poll");
+});
+
+app.post("/poll/compose", async(req, res)=>{
+  const poll = new Poll ({
+   title: req.body.pollTitle,
+    voted:[]
+  });
+  await poll.save();
+  res.redirect(`/poll/${poll._id}`);
+});
+
+app.post("/poll/:pollId",isloggedin,async (req,res)=>
+{
+  console.log(req.body);
+
+  const vote = {
+     user:req.user.username,
+   
+    value:req.body.yes,
+    
+  };
+const requestedPostId = req.params.pollId;
+console.log(requestedPostId);
+   const poll = await Poll.findOne({_id:requestedPostId});
+     poll.voted.push(vote);
+  await poll.save();
+  res.redirect(`/poll/${requestedPostId}`);
+});
+
+app.get("/poll/:pollId",isloggedin, async(req, res)=>{
+ 
+  const requestedPostId = req.params.pollId;
+  const post=await Poll.findOne({_id:requestedPostId});
+  res.render("poll/post-discuss", {
+    
+    title: post.title,
+    postid:requestedPostId,
+    voted:post.voted
+  });
+});
+
+
 
 // ** Port **
 let port = process.env.PORT;

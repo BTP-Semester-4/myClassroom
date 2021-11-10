@@ -1,0 +1,88 @@
+
+
+<%- include("partials/header"); -%>
+
+<div style="background-color:#f3f3f3;">
+
+
+  <br />
+  <br />
+  <br />
+
+
+<div class="row">
+
+  <% var x=0; voted.forEach(function(vote){ %>
+    <%if(vote.user===currentUser.username){ x=1;%>
+      
+    <%}else{;%>
+      
+    <%}%>
+    <% }) %>
+
+
+<div class="container">
+
+<div>
+
+<div class="effect">
+<div class="row">
+<div class="col-lg-8 col-md-12 "  >
+<div class="card card1"  >
+  <form class="" action="/poll/<%=postid%>" method="post">
+  <div class="card-body" style="margin:5px;">
+<h2 class="card-text" style="color:#f97767;"><%=title%></h2>
+<%if(x===1){ %>
+
+  <%}else{;%>
+    <button type="submit" name="yes" value="1">Yes</button>
+    <button type="submit" name="yes" value="0">No</button>
+    <%}%>
+  
+
+</form>
+<%console.log(voted)%>
+
+<% var i=0; var j=0; voted.forEach(function(vote){ %>
+  <%if(vote.value===1){ i++;%>
+    
+  <%}else{j++;%>
+    
+  <%}%>
+  <% }) %>
+  <%=i %>
+  <%=j %>
+
+</div>
+<br />
+
+     
+
+
+
+
+<hr />
+
+
+
+     
+  
+
+       
+
+
+
+
+   </div>
+<br />
+<br />
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<br />
+
+<%- include("partials/footer"); -%>
