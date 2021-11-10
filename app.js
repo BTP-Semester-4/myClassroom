@@ -351,6 +351,12 @@ catch(e)
 
 
 //******poll */
+app.get("/poll", async (req, res)=>{
+  const pos=await  Poll.find({});
+    res.render("poll/home", {
+      poll: pos,
+      });
+  });
 app.get("/poll/compose", (req, res)=>{
   res.render("poll/compose-poll");
 });
