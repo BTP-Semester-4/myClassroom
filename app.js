@@ -357,14 +357,17 @@ app.get("/poll", async (req, res)=>{
       poll: pos,
       });
   });
-app.get("/poll/compose", (req, res)=>{
+app.get("/poll/compose", isloggedin, (req, res)=>{
   res.render("poll/compose-poll");
 });
 
 app.post("/poll/compose", async(req, res)=>{
+  const user= await User.findById(req.user.id);
   const poll = new Poll ({
    title: req.body.pollTitle,
-    voted:[]
+  voted:[],
+  createdby: user.name,
+  date: new Date().toLocaleDateString()
   });
   await poll.save();
   res.redirect(`/poll/${poll._id}`);
@@ -396,7 +399,9 @@ app.get("/poll/:pollId",isloggedin, async(req, res)=>{
     
     title: post.title,
     postid:requestedPostId,
-    voted:post.voted
+    voted:post.voted,
+    createdby: post.createdby,
+    date: post.date
   });
 });
 
