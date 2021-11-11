@@ -40,7 +40,6 @@ app.use(methodOverride('_method'));
 app.use(express.static("public")); //requiring all static files
 app.use(partials());
 
-
 //configuring and setting up session
 const sessionConfig={
   secret:'thisissecret',
@@ -197,6 +196,10 @@ app.get("/discuss/about", (req, res)=>{
 
 app.get("/discuss/compose",isloggedin, (req, res)=>{
   res.render("discuss/compose-discuss");
+});
+
+app.get("/vquiz",isloggedin, (req, res)=>{
+  res.render("vquiz/vquiz");
 });
 
 
