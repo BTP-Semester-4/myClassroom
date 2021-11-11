@@ -10,7 +10,12 @@ const votedSchema={
 const pollSchema= new Schema ({
   
   title: String,
-  voted:[votedSchema]
+  voted:[votedSchema],
+  createdby: String,
+  date : {
+    type: String,
+    required: true,
+}
 });
 
 module.exports=mongoose.model('Poll',pollSchema);

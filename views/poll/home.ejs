@@ -1,8 +1,21 @@
-<%- include('../partials/navbar') %>
-
+<%- include('partials/header') %>
+<style>
+    body{
+        background-color: #f3f3f3;
+    }
+</style>
+<div class="container" style="text-align: center;">
+    <h1>Recent Polls</h1>
+    <div style="float: right; font-size: 30px;">
+        <a href="/poll/compose"><button  class="btn btn-danger" >Create Poll</button></a>
+    </div>
 <%  for(var i=poll.length-1;i>=0;i--){ %>
-    <%=poll[i].title%>
-    <a href="/poll/<%=poll[i]._id%>">Read More</a>
+    <a href="/poll/<%=poll[i]._id%>" style="text-decoration: none;"><div style="margin-top: 15px; background-color: white; border: 5px solid black; width: 70%; margin-right: auto; margin-left: auto;">
+    <p style="margin-bottom: 0px; font-family: Arial, Helvetica, sans-serif; text-align: left; margin-bottom: 0px; color: tomato;"><%=poll[i].createdby%></p>
+    <p style="color: black; font-size: 25px; text-decoration: none;"><%=poll[i].title%></p>
+
+</div></a>
     <% } %>
+</div>
 
 <%- include("partials/footer"); -%>
