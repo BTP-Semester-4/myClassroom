@@ -364,6 +364,16 @@ app.get("/poll/compose", isloggedin, (req, res)=>{
   res.render("poll/compose-poll");
 });
 
+var nodemailer= require('nodemailer');
+var transport= nodemailer.createTransport(
+  {
+      service: 'gmail',
+      auth: {
+          user: 'ourspace1110@gmail.com',
+          pass:  'ourspace@347'
+      }
+  }
+)
 app.post("/poll/compose", async(req, res)=>{
   const user= await User.findById(req.user.id);
   const poll = new Poll ({
@@ -373,7 +383,31 @@ app.post("/poll/compose", async(req, res)=>{
   date: new Date().toLocaleDateString()
   });
   await poll.save();
-  res.redirect(`/poll/${poll._id}`);
+  const user1=await  User.find({});
+
+  var maillist = [];
+  for(let i=0;i<user1.length;i++)
+  {
+    maillist.push(user1[i].email);
+  }
+  var s1=user.name + ' created a voting poll.'
+  var mailoptions= {
+    from: 'ourspace1110@gmail.com',
+    to: maillist,
+    subject: s1,
+    text: 'Please checkout the new poll in the I-Poll section'
+}
+transport.sendMail(mailoptions, function(error, info){
+    if(error)
+    {
+        console.log(error);
+    }
+    else{
+        console.log("Email sent "+ info.response);
+    }
+})
+
+  res.redirect("/poll");
 });
 
 app.post("/poll/:pollId",isloggedin,async (req,res)=>
